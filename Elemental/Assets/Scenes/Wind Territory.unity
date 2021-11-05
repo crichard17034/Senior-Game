@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.29436633, g: 0.3301887, b: 0.31888995, a: 1}
+  m_AmbientSkyColor: {r: 0.41131186, g: 0.65178007, b: 0.745283, a: 1}
   m_AmbientEquatorColor: {r: 0.5, g: 0.46470588, b: 0.46470588, a: 1}
   m_AmbientGroundColor: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 9a00879eb9ac9b643a358bb7924a996d, type: 2}
   m_HaloStrength: 0.492
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 2fc47f9cab429964fa376179b3049e56,
+  m_LightingDataAsset: {fileID: 112000000, guid: 26fd333b54a6934458a3b0b7ae5e1975,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -150,7 +150,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.98151875, b: 0.8443396, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1024,8 +1024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1729679765}
-  speed: 12
-  sprintSpeed: 20
+  speed: 17
+  sprintSpeed: 27
   gravity: -29.43
   jumpHeight: 4
   groundCheck: {fileID: 1628605258}

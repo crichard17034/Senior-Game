@@ -7,8 +7,8 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 12;
-    public float sprintSpeed = 20;
+    public float speed = 17;
+    public float sprintSpeed = 27f;
     public float gravity = -29.43f;
     public float jumpHeight = 4f;
     public Transform groundCheck;
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             isSprinting = false;
-            if (speed > 12)
+            if (speed > 17)
             {
                 speed--;
             }
