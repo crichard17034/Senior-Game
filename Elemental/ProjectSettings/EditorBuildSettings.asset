@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Vale(HUB).unity
+    guid: fdb0add6da2cc7242b219f84c61ecf48
+  - enabled: 1
+    path: Assets/Scenes/Wind Territory.unity
+    guid: 9eb0a009cddcc2d4abbc4a94115ebfa9
   m_configObjects: {}
