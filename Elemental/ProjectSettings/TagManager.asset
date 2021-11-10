@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Stairs
   - Ground
+  - Enemy
+  - Grass
   layers:
   - Default
   - TransparentFX
