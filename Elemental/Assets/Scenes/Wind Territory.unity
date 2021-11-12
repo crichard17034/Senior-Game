@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 442507320}
   - component: {fileID: 442507319}
   - component: {fileID: 442507323}
+  - component: {fileID: 442507325}
+  - component: {fileID: 442507324}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Enemy
@@ -232,6 +234,44 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &442507324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442507318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ab8a07dc155014da7e1a840b9c02ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageValue: 15
+  player: {fileID: 1729679765}
+--- !u!114 &442507325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442507318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0416dc13bd32f046bee6e973db807fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  player: {fileID: 1729679766}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 0
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  sightRange: 0
+  playerInSightRange: 0
 --- !u!1 &445042135
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +509,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 57.587646, y: 358.19922}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719369905
 MonoBehaviour:
@@ -521,7 +561,7 @@ GameObject:
   - component: {fileID: 798686909}
   m_Layer: 0
   m_Name: Sword Placeholder
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -774,8 +814,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 180, y: 30}
-  m_SizeDelta: {x: 315.37308, y: 49.857727}
+  m_AnchoredPosition: {x: 150.68, y: 30}
+  m_SizeDelta: {x: 256.7314, y: 49.857727}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966608339
 MonoBehaviour:
@@ -861,7 +901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 15, y: -258.99927}
+  m_AnchoredPosition: {x: 4, y: -266}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1013634236
@@ -1591,7 +1631,7 @@ GameObject:
   - component: {fileID: 1729679768}
   m_Layer: 0
   m_Name: First Person Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1638,6 +1678,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  isWalking: 0
   isSprinting: 0
   hitHead: 0
   staminaBar: {fileID: 966608337}
@@ -1994,15 +2035,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 31.1
+  m_fontSizeBase: 31.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

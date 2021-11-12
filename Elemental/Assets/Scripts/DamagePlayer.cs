@@ -10,6 +10,10 @@ public class DamagePlayer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<PlayerHealthManager>().loseHealth(damageValue);
+        if(other.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerHealthManager>().loseHealth(damageValue);
+        }
+        
     }
 }
