@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 275017330}
   - component: {fileID: 275017329}
   - component: {fileID: 275017328}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 300475225}
   - component: {fileID: 300475224}
   - component: {fileID: 300475223}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 317585717}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HeadCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 328479395}
   - component: {fileID: 328479394}
   - component: {fileID: 328479393}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426440517
 GameObject:
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 426440518}
   - component: {fileID: 426440520}
   - component: {fileID: 426440519}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 465698592}
   - component: {fileID: 465698591}
   - component: {fileID: 465698590}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -929,7 +929,7 @@ GameObject:
   - component: {fileID: 466384794}
   - component: {fileID: 466384793}
   - component: {fileID: 466384792}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,8 +1116,73 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &487044334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1792073182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &487044335
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487044334}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.5
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!135 &487044336
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487044334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.9417598
+  m_Center: {x: -0.66349876, y: 0.0774484, z: -0.554469}
+--- !u!114 &487044337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487044334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32530e061a098c94e8d4fa7fa5f73a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 487044335}
+  player: {fileID: 2077138794}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 2048
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 20
+  sightRange: 15
+  playerInSightRange: 0
 --- !u!1 &612997760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,7 +1274,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &632921724
 GameObject:
@@ -1223,7 +1288,7 @@ GameObject:
   - component: {fileID: 632921728}
   - component: {fileID: 632921727}
   - component: {fileID: 632921726}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,9 +1380,9 @@ GameObject:
   - component: {fileID: 650577168}
   - component: {fileID: 650577167}
   - component: {fileID: 650577166}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1378,7 +1443,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &685055616
 GameObject:
@@ -1637,7 +1702,7 @@ RectTransform:
   - {fileID: 1642358932}
   - {fileID: 1063273957}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1656,7 +1721,7 @@ GameObject:
   - component: {fileID: 813594932}
   - component: {fileID: 813594931}
   - component: {fileID: 813594930}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1749,7 +1814,7 @@ GameObject:
   - component: {fileID: 818733840}
   - component: {fileID: 818733839}
   - component: {fileID: 818733838}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +1907,7 @@ GameObject:
   - component: {fileID: 858366597}
   - component: {fileID: 858366596}
   - component: {fileID: 858366595}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2080,7 +2145,7 @@ GameObject:
   - component: {fileID: 950054241}
   - component: {fileID: 950054240}
   - component: {fileID: 950054239}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Parkour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2162,7 +2227,7 @@ Transform:
   - {fileID: 818733837}
   - {fileID: 1662898220}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -2176,7 +2241,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2274,7 +2339,7 @@ GameObject:
   - component: {fileID: 994387906}
   - component: {fileID: 994387905}
   - component: {fileID: 994387904}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2367,7 +2432,7 @@ GameObject:
   - component: {fileID: 1036369810}
   - component: {fileID: 1036369809}
   - component: {fileID: 1036369808}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2549,7 +2614,7 @@ GameObject:
   - component: {fileID: 1163559785}
   - component: {fileID: 1163559784}
   - component: {fileID: 1163559783}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2642,7 +2707,7 @@ GameObject:
   - component: {fileID: 1221369245}
   - component: {fileID: 1221369244}
   - component: {fileID: 1221369243}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Low Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2730,7 +2795,7 @@ Transform:
   - {fileID: 994387903}
   - {fileID: 813594929}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226555191
 GameObject:
@@ -2744,7 +2809,7 @@ GameObject:
   - component: {fileID: 1226555195}
   - component: {fileID: 1226555194}
   - component: {fileID: 1226555193}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2837,7 +2902,7 @@ GameObject:
   - component: {fileID: 1356138137}
   - component: {fileID: 1356138136}
   - component: {fileID: 1356138135}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2992,6 +3057,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446767646}
   m_CullTransparentMesh: 0
+--- !u!1 &1472937580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472937581}
+  - component: {fileID: 1472937582}
+  m_Layer: 0
+  m_Name: GroundBake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1472937581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472937580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.9040213, y: 2.214876, z: -8.830931}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472937582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472937580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 2855
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 4d77d93c6f772b6458c0e64b9d4c3370, type: 2}
 --- !u!1 &1547012538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,7 +3129,7 @@ GameObject:
   - component: {fileID: 1547012542}
   - component: {fileID: 1547012541}
   - component: {fileID: 1547012540}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3097,7 +3222,7 @@ GameObject:
   - component: {fileID: 1569411730}
   - component: {fileID: 1569411729}
   - component: {fileID: 1569411728}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3222,7 +3347,7 @@ GameObject:
   - component: {fileID: 1662898223}
   - component: {fileID: 1662898222}
   - component: {fileID: 1662898221}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3315,7 +3440,7 @@ GameObject:
   - component: {fileID: 1662954415}
   - component: {fileID: 1662954414}
   - component: {fileID: 1662954413}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3408,7 +3533,7 @@ GameObject:
   - component: {fileID: 1682551978}
   - component: {fileID: 1682551977}
   - component: {fileID: 1682551976}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3501,7 +3626,7 @@ GameObject:
   - component: {fileID: 1783355368}
   - component: {fileID: 1783355367}
   - component: {fileID: 1783355366}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: High Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3589,8 +3714,122 @@ Transform:
   - {fileID: 1226555192}
   - {fileID: 1163559782}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1792073182
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7578722
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7578722
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7578722
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.4108
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.538
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.73525
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6777961
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 85.343
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5117700066308340382, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -2885438903517860115, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -2571118854743697038, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9589d8f018518854f95f1646f63d493c, type: 2}
+    - target: {fileID: 919132149155446097, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_Name
+      value: newSlime
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753705370032899036, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73b9d0ac0893c3241a1308f16fdb35cc, type: 3}
 --- !u!1 &1845177522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3603,7 +3842,7 @@ GameObject:
   - component: {fileID: 1845177526}
   - component: {fileID: 1845177525}
   - component: {fileID: 1845177524}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3696,7 +3935,7 @@ GameObject:
   - component: {fileID: 1896963845}
   - component: {fileID: 1896963844}
   - component: {fileID: 1896963843}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stairs (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3841,7 +4080,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974266860
 GameObject:
@@ -3855,7 +4094,7 @@ GameObject:
   - component: {fileID: 1974266863}
   - component: {fileID: 1974266862}
   - component: {fileID: 1974266861}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tall Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3934,7 +4173,7 @@ Transform:
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062950271
 GameObject:
@@ -4028,7 +4267,7 @@ Transform:
   m_LocalScale: {x: 7, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 53.58, y: 0, z: 0}
 --- !u!1 &2077138792
 GameObject:
@@ -4042,7 +4281,7 @@ GameObject:
   - component: {fileID: 2077138793}
   - component: {fileID: 2077138795}
   - component: {fileID: 2077138796}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: First Person Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4075,7 +4314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077138792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.434, y: 1.815, z: -10.67}
+  m_LocalPosition: {x: 7.65, y: 1.815, z: -10.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
@@ -4083,7 +4322,7 @@ Transform:
   - {fileID: 2083215383}
   - {fileID: 317585717}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2077138795
 MonoBehaviour:
@@ -4140,7 +4379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2083215383}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

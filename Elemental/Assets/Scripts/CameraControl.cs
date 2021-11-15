@@ -5,13 +5,13 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float mouseSensitivity = 430f;
+    public float mouseSensitivity = 550f; //how quick the player can move the mouse and the camera
     public Transform playerBody;
     float xRotation = 0f;
 
-    void Start()
+    void Start() 
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked; //This lock the cursor to the middle of the screen
         Cursor.visible = false;
     }
 
@@ -23,7 +23,7 @@ public class CameraControl : MonoBehaviour
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime; 
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         xRotation -= mouseY;
