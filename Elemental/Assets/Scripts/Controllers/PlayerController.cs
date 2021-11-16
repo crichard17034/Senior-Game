@@ -7,19 +7,21 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 12; //The players base walk speed
-    public float sprintSpeed = 20; //How fast the player can sprint
-    public float gravity = -29.43f; //How intense the gravity for the player is
-    public float jumpHeight = 4f; //how high the player can jump
-    public Transform groundCheck; //This checks if there is ground below the player
-    public Transform headCheck; //Check to see if there is something above the head
-    public float groundDistance = 5f; //The distance to check before hitting the ground
+    public float speed = 12; 
+    public float sprintSpeed = 20; 
+    public float gravity = -29.43f; 
+    public float jumpHeight = 4f; 
+    public Transform groundCheck; 
+    public Transform headCheck; 
+    public float groundDistance = 5f; 
     public LayerMask groundMask;
     Vector3 velocity;
-    public bool isSprinting = false; //This is to check if player sprinting
-    public bool hitHead = false; //Checks if player's head is hitting something
-    public GameObject staminaBar; //This is the bar for stamina
-    public float sprintCooldown; //This is how long it takes before you can sprint again
+    public bool isWalking = false;
+    public bool isSprinting = false; 
+    public GameObject staminaBar; 
+    public float sprintCooldown; 
+    [SerializeField] Footsteps soundGenerator;
+    [SerializeField] float footStepTimer;
 
     void Update()
     {
@@ -31,9 +33,24 @@ public class PlayerController : MonoBehaviour
 
     public void checkForMovement()
     {
-        float x = Input.GetAxis("Horizontal"); //Checks if the player moves along the horizontial axis
-        float z = Input.GetAxis("Vertical"); //Checks if the player moves along the vertical axis
-        Vector3 move = transform.right * x + transform.forward * z; //This alows the player to move around
+        float x = Input.GetAxis("Horizontal"); 
+        float z = Input.GetAxis("Vertical"); 
+        Vector3 move = transform.right * x + transform.forward * z; 
+
+        if(move.x < 0 || move.x > 0 || move.y < 0 || move.y > 0 || move.z < 0 || move.z > 0)
+        {
+
+            if (!isWalking && controller.isGrounded && isSprinting)
+            {
+                footStepTimer = 0.2f;
+                PlayFootstep();
+            }
+            if (!isWalking && controller.isGrounded && !isSprinting)
+            {
+                footStepTimer = 0.33f;
+                PlayFootstep();
+            }
+        }
 
         if (Input.GetButton("Sprint") && controller.isGrounded && staminaBar.GetComponent<Slider>().value > 0)
         {
@@ -69,8 +86,8 @@ public class PlayerController : MonoBehaviour
 
     public void checkForGround()
     {
-        velocity.y += gravity * Time.deltaTime; //This alows gravity to work
-        controller.Move(velocity * Time.deltaTime); //This alows you to speed up in the air
+        velocity.y += gravity * Time.deltaTime; 
+        controller.Move(velocity * Time.deltaTime); 
 
         if (controller.isGrounded && velocity.y < 0)
         {
@@ -80,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     public void checkForJump()
     {
-        if (Input.GetButtonDown("Jump") && controller.isGrounded) //This allows the player to jump up into the air
+        if (Input.GetButtonDown("Jump") && controller.isGrounded) 
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -94,5 +111,23 @@ public class PlayerController : MonoBehaviour
         {
             velocity.y = 0f;
         }
+    }
+
+    public void PlayFootstep()
+    {
+        StartCoroutine("PlayStep", footStepTimer);
+    }
+
+    IEnumerator PlayStep(float timer)
+    {
+        var randomIndex = Random.Range(0, 3);
+        soundGenerator.audioSource.clip = soundGenerator.footStepSounds[randomIndex];
+
+        soundGenerator.audioSource.Play();
+        isWalking = true;
+
+        yield return new WaitForSeconds(timer);
+
+        isWalking = false;
     }
 }
