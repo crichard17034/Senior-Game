@@ -9,7 +9,11 @@ public class EnemyController : MonoBehaviour
     Transform target;
     public Transform groundCheck; 
     public LayerMask groundMask;
+    Vector3 velocity;
+    public float gravity = -9.81f; 
+    public float jumpHeight = 4f; 
     public float lookRadius = 10f;
+    public float jumpTimer;
 
     void Start()
     {
@@ -20,6 +24,8 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         checkLookRadius();
+        checkGround();
+        checkJump();
     }
 
     public void checkLookRadius()
@@ -29,6 +35,22 @@ public class EnemyController : MonoBehaviour
         if(distance <= lookRadius)
         {
             agent.SetDestination(target.position);
+        }
+    }
+
+    public void checkGround()
+    {
+
+    }
+
+    public void checkJump()
+    {
+        jumpTimer +=1;
+
+        if(jumpTimer > 10f)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            jumpTimer = 0;
         }
     }
 

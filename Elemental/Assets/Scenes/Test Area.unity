@@ -956,25 +956,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 487044334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32530e061a098c94e8d4fa7fa5f73a8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &487044339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487044334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03bf22bc7e87ab64e9bdd77b19cdcfe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 650577168}
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   lookRadius: 10
 --- !u!1 &496053229
 GameObject:
