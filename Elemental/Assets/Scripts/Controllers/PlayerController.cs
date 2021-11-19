@@ -86,8 +86,13 @@ public class PlayerController : MonoBehaviour
 
     public void checkForGround()
     {
+<<<<<<< HEAD
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+=======
+        velocity.y += gravity * Time.deltaTime; 
+        controller.Move(velocity * Time.deltaTime); 
+>>>>>>> 47a64d2b47aa0aa7b93054d2aea21bb65c2d487e
 
         if (controller.isGrounded && velocity.y < 0)
         {
