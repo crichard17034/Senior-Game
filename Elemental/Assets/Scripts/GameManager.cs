@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 public class GameManager: MonoBehaviour
 {
 
+    public void newGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     // takes in a string containing the name of a scene and loads it through SceneManager.
     public void Teleport(string location)
     {
