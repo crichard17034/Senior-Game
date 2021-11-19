@@ -56,7 +56,9 @@ public class EnemyController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-    void OnAnimatorMove ()
+    //The animator sets the rootPosition manually to allow for enemy movement with both NavMeshAgent and Animator
+
+    public void OnAnimatorMove()
     {
         Vector3 position = anim.rootPosition;
         transform.position = position;
