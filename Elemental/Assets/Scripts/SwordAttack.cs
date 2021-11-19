@@ -6,6 +6,7 @@ public class SwordAttack : MonoBehaviour
 {
     Animator anim;
     Collider swordHitbox;
+    public float damageValue;
 
     private void Start()
     {
@@ -39,7 +40,7 @@ public class SwordAttack : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<EnemyController>().loseHealth(damageValue);
         }
     }
 }
