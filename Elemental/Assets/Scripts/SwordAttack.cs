@@ -6,10 +6,7 @@ public class SwordAttack : MonoBehaviour
 {
     Animator anim;
     Collider swordHitbox;
-<<<<<<< HEAD
-=======
     public float damageValue;
->>>>>>> 47a64d2b47aa0aa7b93054d2aea21bb65c2d487e
 
     private void Start()
     {
