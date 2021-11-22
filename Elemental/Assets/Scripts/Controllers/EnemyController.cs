@@ -6,11 +6,11 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     Animator anim;
+    public float attackTimer;
     public float currentHealth;
     public float maxHealth;
     NavMeshAgent agent;
     Transform target;
-    public Transform groundCheck; 
     public LayerMask groundMask;
     Vector3 velocity;
     public float lookRadius = 10f;
@@ -31,21 +31,36 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         checkLookRadius();
+        checkAttackRadius();
     }
 
     public void checkLookRadius()
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if(distance <= lookRadius)
+        if(distance <= lookRadius && distance > attackRange)
         {
             agent.SetDestination(target.position);
+            anim.SetBool("Chasing", true);
             faceTarget();
-            
-            if(agent.remainingDistance > 5f)
-            {
-                anim.SetBool("Chasing", true);
-            }
+        }
+        else
+        {
+            anim.SetBool("Chasing", false);
+        }
+    }
+
+    public void checkAttackRadius()
+    {
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        if(distance <= attackRange)
+        {
+            anim.SetBool("Attacking", true);
+        }
+        else
+        {
+            anim.SetBool("Attacking", false);
         }
     }
 
@@ -62,7 +77,7 @@ public class EnemyController : MonoBehaviour
     {
         Vector3 position = anim.rootPosition;
         transform.position = position;
-    }
+    } 
 
     void OnDrawGizmosSelected()
     {
