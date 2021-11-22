@@ -10,11 +10,11 @@ public class EnemyController : MonoBehaviour
     public float maxHealth;
     NavMeshAgent agent;
     Transform target;
-    public Transform groundCheck; 
+    public Transform groundCheck;
     public LayerMask groundMask;
     Vector3 velocity;
     public float lookRadius = 10f;
-    public float attackRange= 22f;
+    public float attackRange = 22f;
     Collider slimeHitbox;
 
 
@@ -37,12 +37,12 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if(distance <= lookRadius)
+        if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
             faceTarget();
-            
-            if(agent.remainingDistance > 5f)
+
+            if (agent.remainingDistance > 5f)
             {
                 anim.SetBool("Chasing", true);
             }
@@ -56,7 +56,7 @@ public class EnemyController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-    void OnAnimatorMove ()
+    void OnAnimatorMove()
     {
         Vector3 position = anim.rootPosition;
         transform.position = position;
@@ -72,7 +72,7 @@ public class EnemyController : MonoBehaviour
     public void loseHealth(float damageValue)
     {
         currentHealth -= damageValue;
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             currentHealth = 0;
             die();
