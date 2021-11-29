@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager: MonoBehaviour
@@ -13,5 +15,11 @@ public class GameManager: MonoBehaviour
     public void Teleport(string location)
     {
         SceneManager.LoadScene(location);
+    }
+
+    public void unlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

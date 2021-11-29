@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
+    public GameObject player;
     Animator anim;
     Collider swordHitbox;
     public float damageValue;
@@ -14,6 +15,7 @@ public class SwordAttack : MonoBehaviour
         anim = GetComponent<Animator>();
         swordHitbox = GetComponent<Collider>();
         swordHitbox.isTrigger = false;
+        updateAttackStr();
     }
 
     private void Update()
@@ -45,5 +47,10 @@ public class SwordAttack : MonoBehaviour
         {
             other.gameObject.GetComponent<EnemyController>().loseHealth(damageValue);
         }
+    }
+
+    public void updateAttackStr()
+    {
+        damageValue = player.GetComponent<PlayerController>().attackStr;
     }
 }
