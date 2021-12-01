@@ -15,7 +15,6 @@ public class SwordAttack : MonoBehaviour
         anim = GetComponent<Animator>();
         swordHitbox = GetComponent<Collider>();
         swordHitbox.isTrigger = false;
-        updateAttackStr();
     }
 
     private void Update()
@@ -49,8 +48,8 @@ public class SwordAttack : MonoBehaviour
         }
     }
 
-    public void updateAttackStr()
+    public void updateAttackStr(float newAtkStr)
     {
-        damageValue = player.GetComponent<PlayerController>().attackStr;
+        damageValue = newAtkStr;
     }
 }

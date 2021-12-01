@@ -6,8 +6,8 @@ using TMPro;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-    public float currentHealth = 100f;
-    public float maxHealth = 100f;
+    private float currentHealth = 100f;
+    private float maxHealth = 100f;
     public GameObject healthText;
     public GameObject healthImage;
     public Texture fullHealthIMG;
@@ -20,7 +20,7 @@ public class PlayerHealthManager : MonoBehaviour
         setHealthBar(currentHealth);
     }
 
-    public float setHealthBar(float newHealth)
+    public void setHealthBar(float newHealth)
     {
         currentHealth = newHealth;
         healthText.GetComponent<TextMeshProUGUI>().text = "" + currentHealth;
@@ -44,5 +44,11 @@ public class PlayerHealthManager : MonoBehaviour
         {
             healthImage.GetComponent<RawImage>().texture = quarterHealthIMG;
         }
+    }
+
+    public void updateHealthBar(float newMaxHealth)
+    {
+        maxHealth = newMaxHealth;
+        currentHealth = newMaxHealth;
     }
 }

@@ -369,7 +369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageValue: 15
-  player: {fileID: 1729679765}
 --- !u!195 &211242921
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1501,7 +1500,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageValue: 15
-  player: {fileID: 1729679765}
 --- !u!114 &1471381868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1800,7 +1798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageValue: 15
-  player: {fileID: 1729679765}
 --- !u!114 &1536954258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2119,7 +2116,7 @@ MonoBehaviour:
   sprintSpeed: 27
   gravity: -29.43
   jumpHeight: 4
-  currentHealth: 0
+  currentHealth: 100
   maxHealth: 100
   attackStr: 25
   groundCheck: {fileID: 1628605258}

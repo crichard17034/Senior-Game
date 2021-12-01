@@ -359,6 +359,9 @@ MonoBehaviour:
   sprintSpeed: 27
   gravity: -29.43
   jumpHeight: 4
+  currentHealth: 100
+  maxHealth: 100
+  attackStr: 25
   groundCheck: {fileID: 735650421}
   headCheck: {fileID: 1846871993}
   groundDistance: 5
@@ -368,6 +371,7 @@ MonoBehaviour:
   isWalking: 0
   isSprinting: 0
   staminaBar: {fileID: 1272653692}
+  healthBar: {fileID: 1379295665}
   sprintCooldown: 0
   soundGenerator: {fileID: 84726731}
   footStepTimer: 0
@@ -6598,6 +6602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8302b29374b9e714db3c15530ec36fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   damageValue: 0
 --- !u!95 &1591614392
 Animator:
