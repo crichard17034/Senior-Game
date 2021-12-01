@@ -15,4 +15,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(location);
     }
+
+    public void unlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 }

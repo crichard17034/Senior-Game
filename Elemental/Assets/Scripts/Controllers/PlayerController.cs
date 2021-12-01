@@ -7,10 +7,13 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 12; 
-    public float sprintSpeed = 20; 
-    public float gravity = -29.43f; 
-    public float jumpHeight = 4f; 
+    private float speed = 12; 
+    private float sprintSpeed = 20; 
+    private float gravity = -29.43f; 
+    private float jumpHeight = 4f; 
+    private float currentHealth;
+    private float maxHealth;
+    private float attackStr;
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -19,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public bool isWalking = false;
     public bool isSprinting = false; 
     public GameObject staminaBar; 
+    public GameObject healthBar;
+    public GameObject sword;
     public float sprintCooldown; 
     [SerializeField] Footsteps soundGenerator;
     [SerializeField] float footStepTimer;
@@ -113,6 +118,38 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void loseHealth(float damageValue)
+    {
+        currentHealth -= damageValue;
+        if(currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+
+        healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
+    }
+
+    public void gainHealth(float healthValue)
+    {
+        currentHealth += healthValue;
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
+    }
+
+    private void levelUp()
+    {
+        attackStr += 5;
+        maxHealth += 10;
+
+        sword.GetComponent<SwordAttack>().updateAttackStr(attackStr);
+        healthBar.GetComponent<PlayerHealthManager>().updateHealthBar(maxHealth);
+    }
+    
+
     public void PlayFootstep()
     {
         StartCoroutine("PlayStep", footStepTimer);
@@ -130,4 +167,5 @@ public class PlayerController : MonoBehaviour
 
         isWalking = false;
     }
+
 }

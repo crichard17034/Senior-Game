@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class DamagePlayer : MonoBehaviour
 {
     public float damageValue;
-    public CharacterController player;
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        other.gameObject.GetComponent<PlayerHealthManager>().loseHealth(damageValue);
+        if(collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerController>().loseHealth(damageValue);
+        }
+
     }
 }

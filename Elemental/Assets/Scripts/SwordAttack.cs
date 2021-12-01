@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
+    public GameObject player;
     Animator anim;
     Collider swordHitbox;
     public float damageValue;
+    bool attacking;
 
     private void Start()
     {
@@ -26,12 +28,14 @@ public class SwordAttack : MonoBehaviour
         {
             anim.SetBool("attacking", true);
             swordHitbox.isTrigger = true;
+            attacking = true;
 
         }
         else if (Input.GetButtonUp("Attack"))
         {
             anim.SetBool("attacking", false);
             swordHitbox.isTrigger = false;
+            attacking = false;
         }
     }
 
@@ -39,8 +43,14 @@ public class SwordAttack : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
+        if(other.tag == "Enemy" && attacking == true)
         {
             other.gameObject.GetComponent<EnemyController>().loseHealth(damageValue);
         }
+    }
+
+    public void updateAttackStr(float newAtkStr)
+    {
+        damageValue = newAtkStr;
     }
 }
