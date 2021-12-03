@@ -332,6 +332,7 @@ MonoBehaviour:
   attackTimer: 0
   currentHealth: 0
   maxHealth: 75
+  groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -776,7 +777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1729679762}
-  damageValue: 0
+  damageValue: 15
 --- !u!1 &888329156
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,8 +991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1072da2f4477549aa6c0fb765d8ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 100
   healthText: {fileID: 1866051707}
   healthImage: {fileID: 719369903}
   fullHealthIMG: {fileID: 2800000, guid: aca9ddb5e16159444a9a6f7d84cf7e9a, type: 3}
@@ -1515,6 +1514,7 @@ MonoBehaviour:
   attackTimer: 0
   currentHealth: 0
   maxHealth: 75
+  groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1813,6 +1813,7 @@ MonoBehaviour:
   attackTimer: 0
   currentHealth: 0
   maxHealth: 75
+  groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2112,13 +2113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1729679765}
-  speed: 17
-  sprintSpeed: 27
-  gravity: -29.43
-  jumpHeight: 4
-  currentHealth: 100
-  maxHealth: 100
-  attackStr: 25
   groundCheck: {fileID: 1628605258}
   headCheck: {fileID: 2013058144}
   groundDistance: 5
@@ -2129,6 +2123,7 @@ MonoBehaviour:
   isSprinting: 0
   staminaBar: {fileID: 966608337}
   healthBar: {fileID: 982436779}
+  sword: {fileID: 798686903}
   sprintCooldown: 0
   soundGenerator: {fileID: 1729679767}
   footStepTimer: 0
