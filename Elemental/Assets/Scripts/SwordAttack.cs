@@ -24,14 +24,14 @@ public class SwordAttack : MonoBehaviour
 
     public void checkForAttack()
     {
-        if(Input.GetButtonDown("Attack"))
+        if (Input.GetButtonDown("Attack"))
         {
             anim.SetBool("attacking", true);
             swordHitbox.isTrigger = true;
             attacking = true;
 
         }
-        else if(Input.GetButtonUp("Attack"))
+        else if (Input.GetButtonUp("Attack"))
         {
             anim.SetBool("attacking", false);
             swordHitbox.isTrigger = false;
@@ -42,6 +42,7 @@ public class SwordAttack : MonoBehaviour
     //checks if the game object that collided with the sword is an enemy
     void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Enemy")
         if(other.tag == "Enemy" && attacking == true)
         {
             other.gameObject.GetComponent<EnemyController>().loseHealth(damageValue);
