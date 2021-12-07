@@ -14,8 +14,13 @@ public class PlayerController : MonoBehaviour
     private float currentHealth;
     private float maxHealth;
     private float attackStr;
+<<<<<<< HEAD
     private int level;
     private int xp;
+=======
+    private int xp;
+    private int level;
+>>>>>>> 842246b22e5d85a82952a14ddce8f3a79f645a07
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
