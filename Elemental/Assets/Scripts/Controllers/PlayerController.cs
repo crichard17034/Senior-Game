@@ -14,13 +14,8 @@ public class PlayerController : MonoBehaviour
     private float currentHealth;
     private float maxHealth;
     private float attackStr;
-<<<<<<< HEAD
-    private int level;
-    private int xp;
-=======
-    private int xp;
-    private int level;
->>>>>>> 842246b22e5d85a82952a14ddce8f3a79f645a07
+    private float level;
+    private float xp;
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -155,7 +150,15 @@ public class PlayerController : MonoBehaviour
         sword.GetComponent<SwordAttack>().updateAttackStr(attackStr);
         healthBar.GetComponent<PlayerHealthManager>().updateHealthBar(maxHealth);
     }
-    
+
+    public void obtainStats(float mHP, float cHP, float atkStr, float lv, float exp)
+    {
+        maxHealth = mHP;
+        currentHealth = cHP;
+        attackStr = atkStr;
+        level = lv;
+        xp = exp;
+    }
 
     public void PlayFootstep()
     {

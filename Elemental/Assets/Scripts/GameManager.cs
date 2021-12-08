@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    
+    public void continueGame()
+    {
+        SceneManager.LoadScene(1);
+    }
 
     // takes in a string containing the name of a scene and loads it through SceneManager.
     public void Teleport(string location)

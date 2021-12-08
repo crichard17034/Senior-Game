@@ -6,6 +6,8 @@ using Mono.Data.Sqlite;
 
 public class DatabaseSave : MonoBehaviour
 {
+    public GameObject player; 
+
     private string dbName = "URI=file:PlayerStats.db";
 
     void Start()
@@ -26,13 +28,15 @@ public class DatabaseSave : MonoBehaviour
             using(var command = connection.CreateCommand())
             {
                 command.CommandText = "CREATE TABLE IF NOT EXISTS player (maxHealth FLOAT, currentHealth FLOAT, " +
-                    "attackStrength FLOAT, xp INT, level INT);";
+                    "attackStrength FLOAT, xp FLOAT, level FLOAT);";
                 command.ExecuteNonQuery();
             }
             
             connection.Close();
         }
     }
+
+    //on a newGame, any current entries in the player table are removed and the starting stats are inserted in their place
 
     public void newGame()
     {
@@ -42,8 +46,8 @@ public class DatabaseSave : MonoBehaviour
             
             using(var command = connection.CreateCommand())
             {
-                command.CommandText = "INSERT INTO player (maxHealth, currentHealth, attackStrength, xp, level) " +
-                    "VALUES ('" + 103f +"', '" + 100f +"', '" + 15f +"', '" + 0 +"', '" + 1 +"');";
+                command.CommandText = "DELETE FROM player; INSERT INTO player (maxHealth, currentHealth, attackStrength, xp, level) " +
+                    "VALUES ('" + 100f +"', '" + 100f +"', '" + 15f +"', '" + 0f +"', '" + 1f +"');";
                 command.ExecuteNonQuery();
             }
             
@@ -51,7 +55,7 @@ public class DatabaseSave : MonoBehaviour
         }
     }
 
-    public void updateStats(float maxHealth, float currentHealth, float attackStrength, int xp, int level)
+    public void updateStats(float maxHealth, float currentHealth, float attackStrength, float xp, float level)
     {
         using(var connection = new SqliteConnection(dbName))
         {
@@ -82,8 +86,8 @@ public class DatabaseSave : MonoBehaviour
                 {
                     while (reader.Read())
                     {
-                        Debug.Log("Max Health: " + reader["maxHealth"] + "Current Health: " + reader["currentHealth"] + "Attack Strength: " 
-                            + reader["attackStrength"]);  
+                        Debug.Log("Max Health: " + reader["maxHealth"] + " Current Health: " + reader["currentHealth"] + " Attack Strength: " 
+                            + reader["attackStrength"]);
                     }
 
                     reader.Close();

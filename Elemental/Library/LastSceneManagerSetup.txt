@@ -1,13 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
 - path: Assets/Scenes/Wind Territory.unity
-=======
-- path: Assets/Scenes/Title Screen.unity
->>>>>>> 62c2171b30e2cb73c860d0f969fb8fbd4d52dccf
-=======
-- path: Assets/Scenes/Wind Territory.unity
->>>>>>> 842246b22e5d85a82952a14ddce8f3a79f645a07
   isLoaded: 1
   isActive: 1
   isSubScene: 0

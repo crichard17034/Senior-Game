@@ -2166,11 +2166,7 @@ MonoBehaviour:
   isSprinting: 0
   staminaBar: {fileID: 966608337}
   healthBar: {fileID: 982436779}
-<<<<<<< HEAD
-  sword: {fileID: 0}
-=======
   sword: {fileID: 798686903}
->>>>>>> 842246b22e5d85a82952a14ddce8f3a79f645a07
   sprintCooldown: 0
   soundGenerator: {fileID: 1729679767}
   footStepTimer: 0

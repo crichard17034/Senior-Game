@@ -200,7 +200,6 @@ GameObject:
   - component: {fileID: 84726734}
   - component: {fileID: 84726733}
   - component: {fileID: 84726730}
-  - component: {fileID: 84726732}
   - component: {fileID: 84726731}
   m_Layer: 0
   m_Name: First Person Player
@@ -323,25 +322,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4fac36b034e69e04fa4dfc57d5a9f8cd, type: 3}
   - {fileID: 8300000, guid: 996d31e3dbcb4bc48bb196913d27dbe2, type: 3}
   - {fileID: 8300000, guid: ced0bdd844609814da07e7cf980b4b3f, type: 3}
---- !u!114 &84726732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84726729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1072da2f4477549aa6c0fb765d8ba0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 120
-  maxHealth: 100
-  healthText: {fileID: 134099178}
-  healthImage: {fileID: 137217051}
-  fullHealthIMG: {fileID: 2800000, guid: aca9ddb5e16159444a9a6f7d84cf7e9a, type: 3}
-  halfHealthIMG: {fileID: 2800000, guid: 9364cf26c2645bb4d942597058f63030, type: 3}
-  quarterHealthIMG: {fileID: 2800000, guid: 991c9726eafc27846bd7590a8159c4dc, type: 3}
 --- !u!114 &84726733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,13 +335,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 84726734}
-  speed: 17
-  sprintSpeed: 27
-  gravity: -29.43
-  jumpHeight: 4
-  currentHealth: 100
-  maxHealth: 100
-  attackStr: 25
   groundCheck: {fileID: 735650421}
   headCheck: {fileID: 1846871993}
   groundDistance: 5
@@ -372,6 +345,7 @@ MonoBehaviour:
   isSprinting: 0
   staminaBar: {fileID: 1272653692}
   healthBar: {fileID: 1379295665}
+  sword: {fileID: 1591614389}
   sprintCooldown: 0
   soundGenerator: {fileID: 84726731}
   footStepTimer: 0
@@ -5460,6 +5434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1379295666}
+  - component: {fileID: 1379295667}
   m_Layer: 5
   m_Name: Health System
   m_TagString: Untagged
@@ -5488,6 +5463,23 @@ RectTransform:
   m_AnchoredPosition: {x: 4, y: -266}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1379295667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379295665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1072da2f4477549aa6c0fb765d8ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 134099178}
+  healthImage: {fileID: 137217051}
+  fullHealthIMG: {fileID: 2800000, guid: aca9ddb5e16159444a9a6f7d84cf7e9a, type: 3}
+  halfHealthIMG: {fileID: 2800000, guid: 9364cf26c2645bb4d942597058f63030, type: 3}
+  quarterHealthIMG: {fileID: 2800000, guid: 991c9726eafc27846bd7590a8159c4dc, type: 3}
 --- !u!1001 &1393401748
 PrefabInstance:
   m_ObjectHideFlags: 0
