@@ -7,7 +7,7 @@ public class SwordAttack : MonoBehaviour
     public GameObject player;
     Animator anim;
     Collider swordHitbox;
-    public float damageValue;
+    private int damageValue;
     bool attacking;
 
     private void Start()
@@ -49,7 +49,7 @@ public class SwordAttack : MonoBehaviour
         }
     }
 
-    public void updateAttackStr(float newAtkStr)
+    public void updateAttackStr(int newAtkStr)
     {
         damageValue = newAtkStr;
     }

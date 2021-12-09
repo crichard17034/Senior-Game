@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private GameObject databaseSave;
+
     public void newGame()
     {
         SceneManager.LoadScene(1);
+
     }
     
     public void continueGame()

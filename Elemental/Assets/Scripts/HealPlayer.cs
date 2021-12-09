@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealPlayer : MonoBehaviour
 {
-    public float healValue;
+    public int healValue;
 
     void OnTriggerEnter(Collider other)
     {

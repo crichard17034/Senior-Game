@@ -7,8 +7,9 @@ public class EnemyController : MonoBehaviour
 {
     Animator anim;
     public float attackTimer;
-    public float currentHealth;
-    public float maxHealth;
+    public int currentHealth;
+    public int maxHealth;
+    public int xp;
     NavMeshAgent agent;
     Transform target;
     public Transform groundCheck;
@@ -92,7 +93,7 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
-    public void loseHealth(float damageValue)
+    public void loseHealth(int damageValue)
     {
         currentHealth -= damageValue;
         if (currentHealth <= 0)
@@ -104,6 +105,7 @@ public class EnemyController : MonoBehaviour
 
     public void die()
     {
+        FindObjectOfType<PlayerController>().gainXP(xp);
         Destroy(gameObject);
     }
 }

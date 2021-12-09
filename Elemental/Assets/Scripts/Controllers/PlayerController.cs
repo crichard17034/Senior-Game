@@ -11,11 +11,12 @@ public class PlayerController : MonoBehaviour
     private float sprintSpeed = 20; 
     private float gravity = -29.43f; 
     private float jumpHeight = 4f; 
-    private float currentHealth;
-    private float maxHealth;
-    private float attackStr;
-    private float level;
-    private float xp;
+    private int currentHealth;
+    private int maxHealth;
+    private int attackStrength;
+    private int level;
+    private int xp;
+    private int xpGoal;
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -120,7 +121,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void loseHealth(float damageValue)
+    public void loseHealth(int damageValue)
     {
         currentHealth -= damageValue;
         if(currentHealth < 0)
@@ -131,7 +132,7 @@ public class PlayerController : MonoBehaviour
         healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
     }
 
-    public void gainHealth(float healthValue)
+    public void gainHealth(int healthValue)
     {
         currentHealth += healthValue;
         if(currentHealth > maxHealth)
@@ -142,22 +143,41 @@ public class PlayerController : MonoBehaviour
         healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
     }
 
+    public void gainXP(int xpValue)
+    {
+        xp += xpValue;
+        checkLevelUp();
+    }
+
+    private void checkLevelUp()
+    {
+        if(xp >= xpGoal)
+        {
+            levelUp();
+        }
+    }
+
     private void levelUp()
     {
-        attackStr += 5;
+        level += 1;
+        attackStrength += 5;
         maxHealth += 10;
+        xpGoal += 250;
 
-        sword.GetComponent<SwordAttack>().updateAttackStr(attackStr);
+        sword.GetComponent<SwordAttack>().updateAttackStr(attackStrength);
         healthBar.GetComponent<PlayerHealthManager>().updateHealthBar(maxHealth);
     }
 
-    public void obtainStats(float mHP, float cHP, float atkStr, float lv, float exp)
+    public void setStats(int savedMHP, int savedCHP, int savedATK, int savedLV, int savedXP, int savedGoalXP)
     {
-        maxHealth = mHP;
-        currentHealth = cHP;
-        attackStr = atkStr;
-        level = lv;
-        xp = exp;
+        maxHealth = savedMHP;
+        currentHealth = savedCHP;
+        attackStrength= savedATK;
+        level = savedLV;
+        xp = savedXP;
+        xpGoal = savedGoalXP;
+        sword.GetComponent<SwordAttack>().updateAttackStr(attackStrength);
+        healthBar.GetComponent<PlayerHealthManager>().updateHealthBar(maxHealth);
     }
 
     public void PlayFootstep()
@@ -177,5 +197,4 @@ public class PlayerController : MonoBehaviour
 
         isWalking = false;
     }
-
 }

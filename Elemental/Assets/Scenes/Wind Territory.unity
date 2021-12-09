@@ -330,8 +330,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTimer: 0
-  currentHealth: 0
+  currentHealth: 75
   maxHealth: 75
+  xp: 15
   groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
@@ -679,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48de5615d74a68d4f889372cd31e83b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1729679762}
 --- !u!4 &768163365
 Transform:
   m_ObjectHideFlags: 0
@@ -820,7 +822,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1729679762}
-  damageValue: 15
 --- !u!1 &888329156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,8 +1556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTimer: 0
-  currentHealth: 0
+  currentHealth: 75
   maxHealth: 75
+  xp: 15
   groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
@@ -1854,8 +1856,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTimer: 0
-  currentHealth: 0
+  currentHealth: 75
   maxHealth: 75
+  xp: 15
   groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
@@ -2041,7 +2044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640409929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 590.25, y: 252.85, z: 44.68}
+  m_LocalPosition: {x: 568.38, y: 126.73, z: 247.2}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DamagePlayer : MonoBehaviour
 {
-    public float damageValue;
+    public int damageValue;
 
     void OnCollisionEnter(Collision collision)
     {
