@@ -6,15 +6,16 @@ using Mono.Data.Sqlite;
 
 public class DatabaseSave : MonoBehaviour
 {
-    public GameObject player; 
-
     private string dbName = "URI=file:PlayerStats.db";
 
     void Start()
     {
         createDB();
         newGame(100, 100, 15, 1, 0, 100);
-        obtainStats();
+    }
+
+    void Awake()
+    {
         viewStats();
     }
 
@@ -75,7 +76,9 @@ public class DatabaseSave : MonoBehaviour
         }
     }
 
-    public void obtainStats()
+    //opens a connection and IDataReader for the player table and reads off each value to the player's controller to update stats.
+
+    public void obtainStats(GameObject playerObject)
     {
         using(var connection = new SqliteConnection(dbName))
         {
@@ -89,16 +92,17 @@ public class DatabaseSave : MonoBehaviour
                 {
                     while (reader.Read())
                     {
-                        player.GetComponent<PlayerController>().setStats(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5));
+                        playerObject.GetComponent<PlayerController>().setStats(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5));
                     }
 
                     reader.Close();
                 }
             }
-            
             connection.Close();
         }
     }
+
+    //reads off the values of player stats in a debug log. Mainly used for testing purposes
 
     public void viewStats()
     {

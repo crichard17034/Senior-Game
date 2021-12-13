@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Grass
   - PlayerWeapon
+  - Database
+  - Game Manager
   layers:
   - Default
   - TransparentFX

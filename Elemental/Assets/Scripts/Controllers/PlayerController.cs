@@ -172,12 +172,17 @@ public class PlayerController : MonoBehaviour
     {
         maxHealth = savedMHP;
         currentHealth = savedCHP;
-        attackStrength= savedATK;
+        attackStrength = savedATK;
         level = savedLV;
         xp = savedXP;
         xpGoal = savedGoalXP;
         sword.GetComponent<SwordAttack>().updateAttackStr(attackStrength);
         healthBar.GetComponent<PlayerHealthManager>().updateHealthBar(maxHealth);
+    }
+
+    public void logStats()
+    {
+        FindObjectOfType<GameManager>().updateDatabase(maxHealth, currentHealth, attackStrength, level, xp, xpGoal);
     }
 
     public void PlayFootstep()

@@ -6,11 +6,25 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private GameObject databaseSave;
+    private GameObject player;
+
+    void Start()
+    {
+        searchForPlayer();
+        searchForDatabase();
+        sendStatsToPlayer(player);
+    }
+
+    void Awake()
+    {
+        searchForPlayer();
+        searchForDatabase();
+        sendStatsToPlayer(player);
+    }
 
     public void newGame()
     {
         SceneManager.LoadScene(1);
-
     }
     
     public void continueGame()
@@ -18,12 +32,43 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    // takes in a string containing the name of a scene and loads it through SceneManager.
+    //checks if a game object with the tag "Player" is present and sets the value of the player variable
+    public void searchForPlayer()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
+    }
+
+    //checks if a game object with the tag "Database" is present within the current scene and sets the value of
+    //the databaseSave value accordingly
+
+    public void searchForDatabase()
+    {
+        if (databaseSave == null)
+        {
+            databaseSave = GameObject.FindWithTag("Database");
+        }
+    }
+
+    public void sendStatsToPlayer(GameObject player)
+    {
+        databaseSave.GetComponent<DatabaseSave>().obtainStats(player);
+    }
+
+    public void updateDatabase(int mHP, int cHP, int aTK, int lV, int xP, int goalXP)
+    {
+        databaseSave.GetComponent<DatabaseSave>().updateStats(mHP, cHP, aTK, lV, xP, goalXP);
+    }
+
+    // takes in a string containing the name of a scene and loads it through SceneManager
     public void Teleport(string location)
     {
         SceneManager.LoadScene(location);
-    }
-
+    }    
+    
+    //allows the cursor to freely move on screen when on menus
     public void unlockMouse()
     {
         Cursor.lockState = CursorLockMode.None;
