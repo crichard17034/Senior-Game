@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private GameObject databaseSave;
-    private GameObject player;
+    public GameObject databaseSave;
+    public GameObject player;
 
     void Start()
     {
@@ -62,9 +62,15 @@ public class GameManager : MonoBehaviour
         databaseSave.GetComponent<DatabaseSave>().updateStats(mHP, cHP, aTK, lV, xP, goalXP);
     }
 
+    public void getPlayerStats()
+    {
+        player.GetComponent<PlayerController>().sendStats();
+    }
+
     // takes in a string containing the name of a scene and loads it through SceneManager
     public void Teleport(string location)
     {
+        getPlayerStats();
         SceneManager.LoadScene(location);
     }    
     

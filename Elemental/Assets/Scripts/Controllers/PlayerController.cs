@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private int maxHealth;
     private int attackStrength;
     private int level;
-    private int xp;
+    public int xp;
     private int xpGoal;
     public Transform groundCheck; 
     public Transform headCheck; 
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public float sprintCooldown; 
     [SerializeField] Footsteps soundGenerator;
     [SerializeField] float footStepTimer;
+
 
     void Update()
     {
@@ -108,6 +109,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && controller.isGrounded) 
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            sendStats();
         }
     }
 
@@ -180,7 +182,7 @@ public class PlayerController : MonoBehaviour
         healthBar.GetComponent<PlayerHealthManager>().updateHealthBar(maxHealth);
     }
 
-    public void logStats()
+    public void sendStats()
     {
         FindObjectOfType<GameManager>().updateDatabase(maxHealth, currentHealth, attackStrength, level, xp, xpGoal);
     }

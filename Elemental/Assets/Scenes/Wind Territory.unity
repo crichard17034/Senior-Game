@@ -681,7 +681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48de5615d74a68d4f889372cd31e83b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1729679762}
 --- !u!4 &768163365
 Transform:
   m_ObjectHideFlags: 0
@@ -2454,6 +2453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc13047675ef634e8e59e7b7747f0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  databaseSave: {fileID: 768163363}
+  player: {fileID: 1729679762}
 --- !u!114 &1852431632
 MonoBehaviour:
   m_ObjectHideFlags: 0

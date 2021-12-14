@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc13047675ef634e8e59e7b7747f0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  databaseSave: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &64698475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +361,7 @@ MonoBehaviour:
   staminaBar: {fileID: 1272653692}
   healthBar: {fileID: 1379295665}
   sword: {fileID: 1591614389}
+  database: {fileID: 292289766}
   sprintCooldown: 0
   soundGenerator: {fileID: 84726731}
   footStepTimer: 0

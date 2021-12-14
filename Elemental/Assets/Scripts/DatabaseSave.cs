@@ -12,6 +12,7 @@ public class DatabaseSave : MonoBehaviour
     {
         createDB();
         newGame(100, 100, 15, 1, 0, 100);
+        updateStats(100, 100, 15, 1, 0, 100);
     }
 
     void Awake()
@@ -38,7 +39,7 @@ public class DatabaseSave : MonoBehaviour
         }
     }
 
-    //on a newGame, any current entries in the player table are removed and the starting stats are inserted in their place
+    //When starting a new game, any current entries in the player table are removed and the starting stats are inserted in their place
 
     public void newGame(int maxHealth, int currentHealth, int attackStrength, int level, int xp, int xpGoal)
     {
@@ -59,7 +60,7 @@ public class DatabaseSave : MonoBehaviour
 
     //takes in the current stats of the player and updates the values within the table
 
-    public void updateStats(int maxHealth, int currentHealth, int attackStrength, int level, int xp, int xpGoal)
+    public void updateStats(int maxHP, int currentHP, int attackSTR, int lv, int exp, int xpGoal)
     {
         using(var connection = new SqliteConnection(dbName))
         {
@@ -67,13 +68,14 @@ public class DatabaseSave : MonoBehaviour
             
             using(var command = connection.CreateCommand())
             {
-                command.CommandText = "UPDATE player (maxHealth, currentHealth, attackStrength, level, xp, xpGoal) " +
-                    "VALUES ('" + maxHealth +"', '" + currentHealth +"', '" + attackStrength +"', '" + level +"', '" + xp + "', '" + xpGoal +"');";
+                command.CommandText = "UPDATE player SET maxHealth = maxHP, currentHealth = currentHP, " +
+                "attackStrength = attackSTR, level = lv, xp = exp, xpGoal = expGoal;";
                 command.ExecuteNonQuery();
             }
             
             connection.Close();
         }
+        viewStats();
     }
 
     //opens a connection and IDataReader for the player table and reads off each value to the player's controller to update stats.
