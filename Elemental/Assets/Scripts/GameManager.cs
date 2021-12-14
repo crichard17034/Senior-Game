@@ -5,25 +5,52 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    static GameManager instance; 
+    private Scene currentScene;
+    private string sceneName;
     public GameObject databaseSave;
     public GameObject player;
 
     void Start()
     {
-        searchForPlayer();
         searchForDatabase();
+        searchForPlayer();
         sendStatsToPlayer(player);
     }
 
     void Awake()
     {
-        searchForPlayer();
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
         searchForDatabase();
+        searchForPlayer();
         sendStatsToPlayer(player);
+    }
+
+    void OnSceneLoaded()
+    {
+        checkForOneManager();
+        
+        searchForPlayer();
+        sendStatsToPlayer(player);
+    }
+
+    private void checkForOneManager()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void newGame()
     {
+        databaseSave.GetComponent<DatabaseSave>().newGame(100, 100, 15, 1, 0, 100);
         SceneManager.LoadScene(1);
     }
     
@@ -35,9 +62,10 @@ public class GameManager : MonoBehaviour
     //checks if a game object with the tag "Player" is present and sets the value of the player variable
     public void searchForPlayer()
     {
-        if (player == null)
+        if(sceneName != "Title Screen")
         {
             player = GameObject.FindWithTag("Player");
+            Debug.Log(GameObject.FindWithTag("Player"));
         }
     }
 

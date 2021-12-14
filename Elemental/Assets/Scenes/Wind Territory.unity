@@ -2171,6 +2171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1729679765}
+  xp: 0
   groundCheck: {fileID: 1628605258}
   headCheck: {fileID: 2013058144}
   groundDistance: 5
@@ -2419,7 +2420,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1852431630}
   - component: {fileID: 1852431631}
-  - component: {fileID: 1852431632}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Game Manager
@@ -2453,20 +2453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc13047675ef634e8e59e7b7747f0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  databaseSave: {fileID: 768163363}
-  player: {fileID: 1729679762}
---- !u!114 &1852431632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852431629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad14225417bca34ca75016e8f6e19ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  databaseSave: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1866051707
 GameObject:
   m_ObjectHideFlags: 0

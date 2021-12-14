@@ -143,7 +143,6 @@ GameObject:
   m_Component:
   - component: {fileID: 64698473}
   - component: {fileID: 64698474}
-  - component: {fileID: 64698475}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Game Manager
@@ -179,18 +178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   databaseSave: {fileID: 0}
   player: {fileID: 0}
---- !u!114 &64698475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64698472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad14225417bca34ca75016e8f6e19ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &67078203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7290032068064523871, guid: 05af2330f098c83468e5570bde466784,
@@ -350,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 84726734}
+  xp: 0
   groundCheck: {fileID: 735650421}
   headCheck: {fileID: 1846871993}
   groundDistance: 5
@@ -361,7 +349,6 @@ MonoBehaviour:
   staminaBar: {fileID: 1272653692}
   healthBar: {fileID: 1379295665}
   sword: {fileID: 1591614389}
-  database: {fileID: 292289766}
   sprintCooldown: 0
   soundGenerator: {fileID: 84726731}
   footStepTimer: 0

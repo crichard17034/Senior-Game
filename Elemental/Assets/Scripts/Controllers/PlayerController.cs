@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float footStepTimer;
 
 
+    void Awake()
+    {
+        healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
+    }
     void Update()
     {
         checkForMovement();

@@ -11,8 +11,7 @@ public class DatabaseSave : MonoBehaviour
     void Start()
     {
         createDB();
-        newGame(100, 100, 15, 1, 0, 100);
-        updateStats(100, 100, 15, 1, 0, 100);
+        updateStats(100, 100, 15, 1, 0, 30);
     }
 
     void Awake()
@@ -50,7 +49,7 @@ public class DatabaseSave : MonoBehaviour
             using(var command = connection.CreateCommand())
             {
                 command.CommandText = "DELETE FROM player; INSERT INTO player (maxHealth, currentHealth, " +
-                    "attackStrength, level, xp, xpGoal) VALUES('" + maxHealth +"', '" + currentHealth +"', '" + attackStrength +"', '" + level +"', '" + xp + "', '" + xpGoal +"');";
+                    "attackStrength, level, xp, xpGoal) VALUES'"+ maxHealth +"', '"+ currentHealth +"', '"+ attackStrength +"', '"+ level +"', '"+ xp +"', '"+ xpGoal+"';";
                 command.ExecuteNonQuery();
             }
             
@@ -60,7 +59,7 @@ public class DatabaseSave : MonoBehaviour
 
     //takes in the current stats of the player and updates the values within the table
 
-    public void updateStats(int maxHP, int currentHP, int attackSTR, int lv, int exp, int xpGoal)
+    public void updateStats(int maxHP, int currentHP, int attackSTR, int lv, int exp, int expGoal)
     {
         using(var connection = new SqliteConnection(dbName))
         {
@@ -68,8 +67,8 @@ public class DatabaseSave : MonoBehaviour
             
             using(var command = connection.CreateCommand())
             {
-                command.CommandText = "UPDATE player SET maxHealth = maxHP, currentHealth = currentHP, " +
-                "attackStrength = attackSTR, level = lv, xp = exp, xpGoal = expGoal;";
+                command.CommandText = "UPDATE player SET maxHealth = '"+ maxHP +"', currentHealth = '" + currentHP +"'," +
+                "attackStrength = '" + attackSTR + "', level = '" + lv + "', xp = '" + exp + "', xpGoal = '" + expGoal + "';";
                 command.ExecuteNonQuery();
             }
             
