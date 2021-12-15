@@ -8,6 +8,9 @@ public class WarpPoint : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        FindObjectOfType<GameManager>().Teleport(warpLocation);
+        if(other.tag == "Player")
+        {
+            FindObjectOfType<GameManager>().Teleport(warpLocation);
+        }
     }
 }
