@@ -65,7 +65,6 @@ public class GameManager : MonoBehaviour
         if(sceneName != "Title Screen")
         {
             player = GameObject.FindWithTag("Player");
-            Debug.Log(GameObject.FindWithTag("Player"));
         }
     }
 
@@ -82,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     public void sendStatsToPlayer(GameObject player)
     {
-        databaseSave.GetComponent<DatabaseSave>().obtainStats(player);
+        databaseSave.GetComponent<DatabaseSave>().sendToPlayer(player);
     }
 
     public void updateDatabase(int mHP, int cHP, int aTK, int lV, int xP, int goalXP)

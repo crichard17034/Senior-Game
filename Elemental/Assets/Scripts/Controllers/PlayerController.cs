@@ -31,11 +31,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Footsteps soundGenerator;
     [SerializeField] float footStepTimer;
 
-
-    void Awake()
-    {
-        healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
-    }
     void Update()
     {
         checkForMovement();
@@ -145,7 +140,6 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-
         healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
     }
 
@@ -163,16 +157,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //updates the player stats and related components with new values
+
     private void levelUp()
     {
         level += 1;
         attackStrength += 5;
         maxHealth += 10;
-        xpGoal += 250;
+        currentHealth = maxHealth;
+        xpGoal += 100;
 
         sword.GetComponent<SwordAttack>().updateAttackStr(attackStrength);
-        healthBar.GetComponent<PlayerHealthManager>().updateHealthBar(maxHealth);
+        healthBar.GetComponent<PlayerHealthManager>().levelUpHealth(maxHealth);
     }
+
+    //gets the values of each stat from the database and applies them to the corresponding player stats.
 
     public void setStats(int savedMHP, int savedCHP, int savedATK, int savedLV, int savedXP, int savedGoalXP)
     {
@@ -183,7 +182,7 @@ public class PlayerController : MonoBehaviour
         xp = savedXP;
         xpGoal = savedGoalXP;
         sword.GetComponent<SwordAttack>().updateAttackStr(attackStrength);
-        healthBar.GetComponent<PlayerHealthManager>().updateHealthBar(maxHealth);
+        healthBar.GetComponent<PlayerHealthManager>().newSceneHealth(maxHealth, currentHealth);
     }
 
     public void sendStats()

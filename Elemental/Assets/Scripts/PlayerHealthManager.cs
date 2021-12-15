@@ -14,11 +14,6 @@ public class PlayerHealthManager : MonoBehaviour
     public Texture halfHealthIMG;
     public Texture quarterHealthIMG;
 
-    void Start()
-    {
-        currentHealth = maxHealth;
-        setHealthBar(currentHealth);
-    }
 
     public void setHealthBar(int newHealth)
     {
@@ -46,9 +41,17 @@ public class PlayerHealthManager : MonoBehaviour
         }
     }
 
-    public void updateHealthBar(int newMaxHealth)
+    public void newSceneHealth(int newMaxHealth, int newCurrentHealth)
     {
         maxHealth = newMaxHealth;
-        currentHealth = newMaxHealth;
+        currentHealth = newCurrentHealth;
+        setHealthBar(currentHealth);
+    }
+
+    public void levelUpHealth(int newMaxHealth)
+    {
+        maxHealth = newMaxHealth;
+        currentHealth = maxHealth;
+        setHealthBar(currentHealth);
     }
 }

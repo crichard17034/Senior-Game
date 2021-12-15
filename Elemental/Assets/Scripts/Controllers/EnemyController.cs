@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     Animator anim;
-    public float attackTimer;
     public int currentHealth;
     public int maxHealth;
     public int xp;
@@ -40,14 +39,13 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= lookRadius)
         if(distance <= lookRadius && distance > attackRange)
         {
             agent.SetDestination(target.position);
             anim.SetBool("Chasing", true);
             faceTarget();
 
-            if (agent.remainingDistance > 5f)
+            if (agent.remainingDistance > 5f && AttackTimer > 0f)
             {
                 anim.SetBool("Chasing", true);
             }
@@ -55,6 +53,7 @@ public class EnemyController : MonoBehaviour
         else
         {
             anim.SetBool("Chasing", false);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
         }
     }
 
@@ -65,6 +64,7 @@ public class EnemyController : MonoBehaviour
         if(distance <= attackRange)
         {
             anim.SetBool("Attacking", true);
+            anim.SetBool;
         }
         else
         {
