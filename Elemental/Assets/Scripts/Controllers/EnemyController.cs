@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     Vector3 velocity;
     public float lookRadius = 10f;
     public float attackRange = 22f;
+    public float attackTimer = 120f;
     Collider slimeHitbox;
 
 
@@ -43,9 +44,10 @@ public class EnemyController : MonoBehaviour
         {
             agent.SetDestination(target.position);
             anim.SetBool("Chasing", true);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             faceTarget();
 
-            if (agent.remainingDistance > 5f && AttackTimer > 0f)
+            if (agent.remainingDistance > 7f && attackTimer > 0f)
             {
                 anim.SetBool("Chasing", true);
             }
@@ -57,18 +59,27 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    //Checks if the player's distance is within the attack range. If the attackTimer is less than 0, the enemy will attack before resetting the timer to 120.
+
     public void checkAttackRadius()
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
         if(distance <= attackRange)
         {
-            anim.SetBool("Attacking", true);
-            anim.SetBool;
+            attackTimer --;
+            faceTarget();
+            if(attackTimer < 0f)
+            {
+                anim.SetBool("Attacking", true);
+                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            }
         }
         else
         {
             anim.SetBool("Attacking", false);
+            attackTimer = 120f;
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
         }
     }
 
