@@ -7,4 +7,8 @@ Cmd: initializeCompiler
 =======
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+<<<<<<< HEAD
 >>>>>>> 5abd76ebbc278f229c1c9ad0b5ba29e0c2efca54
+=======
+>>>>>>> 9cd75f331bfab64071e6751cd3bfda89b71fc78f
+>>>>>>> ccWork
