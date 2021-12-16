@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
     static GameManager instance; 
     private Scene currentScene;
     private string sceneName;
@@ -50,7 +48,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     public void newGame()
     {
         databaseSave.GetComponent<DatabaseSave>().newGame(100, 100, 15, 1, 0, 100);
@@ -70,8 +67,6 @@ public class GameManager : MonoBehaviour
             player = GameObject.FindWithTag("Player");
         }
     }
-<<<<<<< HEAD
-=======
 
     //checks if a game object with the tag "Database" is present within the current scene and sets the value of
     //the databaseSave value accordingly
@@ -112,5 +107,4 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 }

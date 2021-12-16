@@ -8,12 +8,6 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
-<<<<<<< HEAD
-    public float speed = 12; 
-    public float sprintSpeed = 20; 
-    public float gravity = -29.43f; 
-    public float jumpHeight = 4f; 
-=======
     private float speed = 12; 
     private float sprintSpeed = 20; 
     private float gravity = -29.43f; 
@@ -25,7 +19,6 @@ public class PlayerController : MonoBehaviour
     public int xp;
     private int xpGoal;
     private string currentElement;
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -34,11 +27,8 @@ public class PlayerController : MonoBehaviour
     public bool isWalking = false;
     public bool isSprinting = false; 
     public GameObject staminaBar; 
-<<<<<<< HEAD
-=======
     public GameObject healthBar;
     public GameObject sword;
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     public float sprintCooldown; 
     [SerializeField] Footsteps soundGenerator;
     [SerializeField] float footStepTimer;
@@ -135,8 +125,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-=======
     public void loseHealth(int damageValue)
     {
         currentHealth -= damageValue;
@@ -205,7 +193,6 @@ public class PlayerController : MonoBehaviour
         FindObjectOfType<GameManager>().updateDatabase(maxHealth, currentHealth, attackStrength, level, xp, xpGoal);
     }
 
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     public void PlayFootstep()
     {
         StartCoroutine("PlayStep", footStepTimer);
@@ -223,8 +210,6 @@ public class PlayerController : MonoBehaviour
 
         isWalking = false;
     }
-<<<<<<< HEAD
-=======
 
     public void backToMenu()
     {
@@ -234,5 +219,4 @@ public class PlayerController : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 }

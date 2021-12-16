@@ -349,16 +349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5531e3214bb85044f82cc6c0e4083895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  currentHealth: 0
-  maxHealth: 0
-  groundCheck: {fileID: 0}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  lookRadius: 10
-  attackRange: 22
-=======
   currentHealth: 75
   maxHealth: 75
   xp: 15
@@ -369,7 +359,6 @@ MonoBehaviour:
   lookRadius: 30
   attackRange: 5
   attackTimer: 0
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 --- !u!95 &211242918
 Animator:
   serializedVersion: 3
@@ -401,12 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134ef2b1103aed64ea803d98b62f34e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  damageValue: 0
-  player: {fileID: 0}
-=======
   damageValue: 15
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 --- !u!195 &211242921
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -869,11 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6106e4a77e81d7478b6679390530bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  damageValue: 0
-=======
   player: {fileID: 1729679762}
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 --- !u!1 &888329156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,14 +1067,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1072da2f4477549aa6c0fb765d8ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-=======
   healthText: {fileID: 1866051707}
   healthImage: {fileID: 719369903}
   fullHealthIMG: {fileID: 2800000, guid: aca9ddb5e16159444a9a6f7d84cf7e9a, type: 3}
   halfHealthIMG: {fileID: 2800000, guid: 9364cf26c2645bb4d942597058f63030, type: 3}
   quarterHealthIMG: {fileID: 2800000, guid: 991c9726eafc27846bd7590a8159c4dc, type: 3}
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 --- !u!1 &1013634236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,18 +1574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5531e3214bb85044f82cc6c0e4083895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  currentHealth: 0
-  maxHealth: 0
-  groundCheck: {fileID: 0}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  lookRadius: 10
-  attackRange: 22
-=======
   damageValue: 15
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 --- !u!114 &1471381868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,10 +1587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134ef2b1103aed64ea803d98b62f34e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  damageValue: 0
-  player: {fileID: 0}
-=======
   currentHealth: 75
   maxHealth: 75
   xp: 15
@@ -1635,7 +1597,6 @@ MonoBehaviour:
   lookRadius: 30
   attackRange: 5
   attackTimer: 0
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 --- !u!95 &1471381869
 Animator:
   serializedVersion: 3
@@ -1913,18 +1874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5531e3214bb85044f82cc6c0e4083895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  currentHealth: 0
-  maxHealth: 0
-  groundCheck: {fileID: 0}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  lookRadius: 10
-  attackRange: 22
-=======
   damageValue: 15
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 --- !u!114 &1536954258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1937,10 +1887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134ef2b1103aed64ea803d98b62f34e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  damageValue: 0
-  player: {fileID: 0}
-=======
   currentHealth: 75
   maxHealth: 75
   xp: 15
@@ -1951,7 +1897,6 @@ MonoBehaviour:
   lookRadius: 30
   attackRange: 5
   attackTimer: 0
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 --- !u!95 &1536954259
 Animator:
   serializedVersion: 3
@@ -2265,32 +2210,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1729679765}
-<<<<<<< HEAD
-  speed: 12
-  sprintSpeed: 20
-  gravity: -29.43
-  jumpHeight: 4
-=======
   xp: 0
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
   groundCheck: {fileID: 1628605258}
   headCheck: {fileID: 2013058144}
   groundDistance: 5
   groundMask:
     serializedVersion: 2
-<<<<<<< HEAD
-    m_Bits: 0
-  isWalking: 0
-  isSprinting: 0
-  staminaBar: {fileID: 966608337}
-=======
     m_Bits: 1847
   isWalking: 0
   isSprinting: 0
   staminaBar: {fileID: 966608337}
   healthBar: {fileID: 982436779}
   sword: {fileID: 798686903}
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
   sprintCooldown: 0
   soundGenerator: {fileID: 1729679763}
   footStepTimer: 0
@@ -2937,20 +2868,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-<<<<<<< HEAD
-      objectReference: {fileID: 2100000, guid: e507ad82aed51b942874e413388a6b66, type: 2}
-=======
       objectReference: {fileID: 2100000, guid: 7ee4797715ee0c940b396cc2dd229673, type: 2}
->>>>>>> ccWork
     - target: {fileID: -7013975035670149124, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-<<<<<<< HEAD
-      objectReference: {fileID: 2100000, guid: e507ad82aed51b942874e413388a6b66, type: 2}
-=======
       objectReference: {fileID: 2100000, guid: 7ee4797715ee0c940b396cc2dd229673, type: 2}
->>>>>>> ccWork
     - target: {fileID: -5117700066308340382, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
         type: 3}
       propertyPath: m_TagString

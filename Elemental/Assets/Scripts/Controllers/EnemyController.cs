@@ -6,15 +6,10 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     Animator anim;
-<<<<<<< HEAD
-    public float currentHealth;
-    public float maxHealth;
-=======
     public int currentHealth;
     public int maxHealth;
     public int xp;
     public string element;
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     NavMeshAgent agent;
     Transform target;
     public Transform groundCheck;
@@ -22,10 +17,7 @@ public class EnemyController : MonoBehaviour
     Vector3 velocity;
     public float lookRadius = 10f;
     public float attackRange = 22f;
-<<<<<<< HEAD
-=======
     public float attackTimer = 120f;
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     Collider slimeHitbox;
 
 
@@ -49,14 +41,6 @@ public class EnemyController : MonoBehaviour
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
-<<<<<<< HEAD
-            faceTarget();
-
-            if (agent.remainingDistance > 5f)
-            {
-                anim.SetBool("Chasing", true);
-            }
-=======
             anim.SetBool("Chasing", true);
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             faceTarget();
@@ -94,7 +78,6 @@ public class EnemyController : MonoBehaviour
             anim.SetBool("Attacking", false);
             attackTimer = 120f;
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
         }
     }
 
@@ -105,12 +88,7 @@ public class EnemyController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-<<<<<<< HEAD
-    void OnAnimatorMove()
-=======
-
     public void OnAnimatorMove()
->>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     {
         Vector3 position = anim.rootPosition;
         transform.position = position;
