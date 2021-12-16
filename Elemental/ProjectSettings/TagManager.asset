@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Grass
   - PlayerWeapon
+  - FireGem
+  - WaterGem
+  - WindGem
   layers:
   - Default
   - TransparentFX
