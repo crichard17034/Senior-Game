@@ -74,12 +74,11 @@ public class DatabaseSave : MonoBehaviour
             
             connection.Close();
         }
-        viewStats();
     }
 
     //opens a connection and IDataReader for the player table and reads off each value to the player's controller to update stats.
 
-    public void obtainStats(GameObject playerObject)
+    public void sendToPlayer(GameObject playerObject)
     {
         using(var connection = new SqliteConnection(dbName))
         {

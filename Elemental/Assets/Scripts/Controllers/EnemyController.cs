@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     Animator anim;
-    public float attackTimer;
     public int currentHealth;
     public int maxHealth;
     public int xp;
@@ -17,6 +16,7 @@ public class EnemyController : MonoBehaviour
     Vector3 velocity;
     public float lookRadius = 10f;
     public float attackRange = 22f;
+    public float attackTimer = 120f;
     Collider slimeHitbox;
 
 
@@ -40,14 +40,14 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= lookRadius)
         if(distance <= lookRadius && distance > attackRange)
         {
             agent.SetDestination(target.position);
             anim.SetBool("Chasing", true);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             faceTarget();
 
-            if (agent.remainingDistance > 5f)
+            if (agent.remainingDistance > 7f && attackTimer > 0f)
             {
                 anim.SetBool("Chasing", true);
             }
@@ -55,8 +55,11 @@ public class EnemyController : MonoBehaviour
         else
         {
             anim.SetBool("Chasing", false);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
         }
     }
+
+    //Checks if the player's distance is within the attack range. If the attackTimer is less than 0, the enemy will attack before resetting the timer to 120.
 
     public void checkAttackRadius()
     {
@@ -64,11 +67,19 @@ public class EnemyController : MonoBehaviour
 
         if(distance <= attackRange)
         {
-            anim.SetBool("Attacking", true);
+            attackTimer --;
+            faceTarget();
+            if(attackTimer < 0f)
+            {
+                anim.SetBool("Attacking", true);
+                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            }
         }
         else
         {
             anim.SetBool("Attacking", false);
+            attackTimer = 120f;
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
         }
     }
 
