@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         checkForGround();
         checkForCeiling();
         checkForJump();
+        backToMenu();
     }
 
     public void checkForMovement()
@@ -207,5 +209,14 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(timer);
 
         isWalking = false;
+    }
+
+    public void backToMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
