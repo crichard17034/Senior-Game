@@ -9,7 +9,7 @@ public class DamagePlayer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Player")
+        if(gameObject.tag == "Player")
         {
             gameObject.GetComponent<PlayerController>().loseHealth(damageValue);
         }

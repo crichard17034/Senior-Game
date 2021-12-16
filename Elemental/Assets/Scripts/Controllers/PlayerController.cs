@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
         checkForGround();
         checkForCeiling();
         checkForJump();
-        backToMenu();
     }
 
     public void checkForMovement()

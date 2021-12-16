@@ -17,6 +17,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void setHealthBar(int newHealth)
     {
+        currentHealth = newHealth;
         healthText.GetComponent<TextMeshProUGUI>().text = "" + currentHealth;
         setHealthIMG(currentHealth);
     }
