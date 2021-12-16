@@ -26,8 +26,6 @@ public class EnemyController : MonoBehaviour
         currentHealth = maxHealth;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        slimeHitbox = GetComponent<Collider>();
-        slimeHitbox.isTrigger = false;
     }
 
     void Update()
