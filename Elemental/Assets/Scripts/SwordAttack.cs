@@ -8,6 +8,7 @@ public class SwordAttack : MonoBehaviour
     Animator anim;
     Collider swordHitbox;
     private int damageValue;
+    private string currentElement;
     bool attacking;
 
     private void Start()

@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     public int currentHealth;
     public int maxHealth;
     public int xp;
+    public string element;
     NavMeshAgent agent;
     Transform target;
     public Transform groundCheck;
