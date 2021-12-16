@@ -9,9 +9,6 @@ public class AddEllement : MonoBehaviour
     public bool isWaterGem = false;
     public bool isWindGem = false;
 
-    public bool hasFireElem = false;
-    public bool hasWaterElem = false;
-    public bool hasWindElem = false;
     private void OnTriggerEnter(Collider other)
     {
        
@@ -24,6 +21,10 @@ public class AddEllement : MonoBehaviour
             { 
                 ChangeEllement.setElem = "Fire";
                 Debug.Log("The Player Picked up a Fire Gem");
+                ChangeEllement.totalGems = ChangeEllement.totalGems + 1;
+                ChangeEllement.hasFire = true;
+                Debug.Log("The Player can now switch to the Fire Element");
+
             }
             if (isWaterGem == true) 
             {     

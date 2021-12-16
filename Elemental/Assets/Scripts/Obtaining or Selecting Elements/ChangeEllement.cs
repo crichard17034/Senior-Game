@@ -5,10 +5,13 @@ using UnityEngine;
 public class ChangeEllement : MonoBehaviour
 {   
 
-    //Variables to Set the Current Element
-    public bool hasFire = false;
-    public bool hasWater = false;
-    public bool hasWind = false;
+    //Can be Changed by the Add Elements Script
+    public static bool hasFire = false;
+    public static bool hasWater = false;
+    public static bool hasWind = false;
+
+    public static int totalGems = 0;
+
 
     //A Variable that is accessed by the addEllement script.
     public static string setElem = "No Element";
@@ -30,8 +33,13 @@ public class ChangeEllement : MonoBehaviour
     }
 
     public void switchOutElement()
-    { 
-        
+    {
+        if (totalGems >= 0)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            { }
+        }
+        else { }
     }
 
 }
