@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonClick : MonoBehaviour
 {
+
     public void newGame()
     {
         FindObjectOfType<GameManager>().newGame();

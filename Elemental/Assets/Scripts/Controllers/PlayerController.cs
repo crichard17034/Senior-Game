@@ -11,9 +11,6 @@ public class PlayerController : MonoBehaviour
     public float sprintSpeed = 20; 
     public float gravity = -29.43f; 
     public float jumpHeight = 4f; 
-    public float currentHealth;
-    public float maxHealth;
-    public float attackStr;
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -22,7 +19,6 @@ public class PlayerController : MonoBehaviour
     public bool isWalking = false;
     public bool isSprinting = false; 
     public GameObject staminaBar; 
-    public GameObject healthBar;
     public float sprintCooldown; 
     [SerializeField] Footsteps soundGenerator;
     [SerializeField] float footStepTimer;
@@ -117,27 +113,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void loseHealth(float damageValue)
-    {
-        currentHealth -= damageValue;
-        if(currentHealth < 0)
-        {
-            currentHealth = 0;
-        }
-        healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
-    }
-
-    public void gainHealth(float healthValue)
-    {
-        currentHealth += healthValue;
-        if(currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
-
-        healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
-    }
-
     public void PlayFootstep()
     {
         StartCoroutine("PlayStep", footStepTimer);
@@ -155,5 +130,4 @@ public class PlayerController : MonoBehaviour
 
         isWalking = false;
     }
-
 }
