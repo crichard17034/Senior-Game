@@ -351,14 +351,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 75
   maxHealth: 75
-  xp: 15
+  xp: 20
+  element: 
   groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  lookRadius: 30
-  attackRange: 5
-  attackTimer: 0
+    m_Bits: 0
+  lookRadius: 10
+  attackRange: 22
+  attackTimer: 120
 --- !u!95 &211242918
 Animator:
   serializedVersion: 3
@@ -853,7 +854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8302b29374b9e714db3c15530ec36fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1729679762}
+  player: {fileID: 0}
 --- !u!1 &888329156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,14 +1590,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 75
   maxHealth: 75
-  xp: 15
+  xp: 20
+  element: 
   groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  lookRadius: 30
-  attackRange: 5
-  attackTimer: 0
+    m_Bits: 0
+  lookRadius: 10
+  attackRange: 22
+  attackTimer: 120
 --- !u!95 &1471381869
 Animator:
   serializedVersion: 3
@@ -1889,14 +1891,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 75
   maxHealth: 75
-  xp: 15
+  xp: 20
+  element: 
   groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  lookRadius: 30
-  attackRange: 5
-  attackTimer: 0
+    m_Bits: 0
+  lookRadius: 10
+  attackRange: 22
+  attackTimer: 120
 --- !u!95 &1536954259
 Animator:
   serializedVersion: 3
@@ -2197,7 +2200,7 @@ MonoBehaviour:
   groundDistance: 5
   groundMask:
     serializedVersion: 2
-    m_Bits: 1847
+    m_Bits: 0
   isWalking: 0
   isSprinting: 0
   staminaBar: {fileID: 966608337}
