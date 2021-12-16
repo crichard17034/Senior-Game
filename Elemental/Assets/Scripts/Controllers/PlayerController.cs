@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private int level;
     public int xp;
     private int xpGoal;
+    private string currentElement;
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 

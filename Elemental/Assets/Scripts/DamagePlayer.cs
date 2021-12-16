@@ -13,6 +13,5 @@ public class DamagePlayer : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerController>().loseHealth(damageValue);
         }
-
     }
 }
