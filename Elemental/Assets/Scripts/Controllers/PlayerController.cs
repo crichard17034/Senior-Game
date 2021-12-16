@@ -3,14 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
+<<<<<<< HEAD
     public float speed = 12; 
     public float sprintSpeed = 20; 
     public float gravity = -29.43f; 
     public float jumpHeight = 4f; 
+=======
+    private float speed = 12; 
+    private float sprintSpeed = 20; 
+    private float gravity = -29.43f; 
+    private float jumpHeight = 4f; 
+    private int currentHealth;
+    private int maxHealth;
+    private int attackStrength;
+    private int level;
+    public int xp;
+    private int xpGoal;
+    private string currentElement;
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -19,6 +34,11 @@ public class PlayerController : MonoBehaviour
     public bool isWalking = false;
     public bool isSprinting = false; 
     public GameObject staminaBar; 
+<<<<<<< HEAD
+=======
+    public GameObject healthBar;
+    public GameObject sword;
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     public float sprintCooldown; 
     [SerializeField] Footsteps soundGenerator;
     [SerializeField] float footStepTimer;
@@ -29,6 +49,7 @@ public class PlayerController : MonoBehaviour
         checkForGround();
         checkForCeiling();
         checkForJump();
+        backToMenu();
     }
 
     public void checkForMovement()
@@ -100,6 +121,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && controller.isGrounded) 
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            sendStats();
         }
     }
 
@@ -113,6 +135,77 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+=======
+    public void loseHealth(int damageValue)
+    {
+        currentHealth -= damageValue;
+        if(currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+
+        healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
+    }
+
+    public void gainHealth(int healthValue)
+    {
+        currentHealth += healthValue;
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        healthBar.GetComponent<PlayerHealthManager>().setHealthBar(currentHealth);
+    }
+
+    public void gainXP(int xpValue)
+    {
+        xp += xpValue;
+        checkLevelUp();
+    }
+
+    private void checkLevelUp()
+    {
+        if(xp >= xpGoal)
+        {
+            levelUp();
+        }
+    }
+
+    //updates the player stats and related components with new values
+
+    private void levelUp()
+    {
+        level += 1;
+        attackStrength += 5;
+        maxHealth += 10;
+        currentHealth = maxHealth;
+        xpGoal += 100;
+
+        sword.GetComponent<SwordAttack>().updateAttackStr(attackStrength);
+        healthBar.GetComponent<PlayerHealthManager>().levelUpHealth(maxHealth);
+    }
+
+    //gets the values of each stat from the database and applies them to the corresponding player stats.
+
+    public void setStats(int savedMHP, int savedCHP, int savedATK, int savedLV, int savedXP, int savedGoalXP)
+    {
+        maxHealth = savedMHP;
+        currentHealth = savedCHP;
+        attackStrength = savedATK;
+        level = savedLV;
+        xp = savedXP;
+        xpGoal = savedGoalXP;
+        sword.GetComponent<SwordAttack>().updateAttackStr(attackStrength);
+        healthBar.GetComponent<PlayerHealthManager>().newSceneHealth(maxHealth, currentHealth);
+    }
+
+    public void sendStats()
+    {
+        FindObjectOfType<GameManager>().updateDatabase(maxHealth, currentHealth, attackStrength, level, xp, xpGoal);
+    }
+
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     public void PlayFootstep()
     {
         StartCoroutine("PlayStep", footStepTimer);
@@ -130,4 +223,16 @@ public class PlayerController : MonoBehaviour
 
         isWalking = false;
     }
+<<<<<<< HEAD
+=======
+
+    public void backToMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 }

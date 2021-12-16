@@ -6,14 +6,20 @@ using TMPro;
 
 public class PlayerHealthManager : MonoBehaviour
 {
+<<<<<<< HEAD
     public float currentHealth;
     public float maxHealth;
+=======
+    private int currentHealth;
+    private int maxHealth;
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     public GameObject healthText;
     public GameObject healthImage;
     public Texture fullHealthIMG;
     public Texture halfHealthIMG;
     public Texture quarterHealthIMG;
 
+<<<<<<< HEAD
     void Start()
     {
         currentHealth = maxHealth;
@@ -21,15 +27,19 @@ public class PlayerHealthManager : MonoBehaviour
     }
 
     public void setHealthBar()
+=======
+
+    public void setHealthBar(int newHealth)
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     {
         healthText.GetComponent<TextMeshProUGUI>().text = "" + currentHealth;
         setHealthIMG(currentHealth);
     }
 
-    public void setHealthIMG(float healthValue)
+    public void setHealthIMG(int healthValue)
     {
-        float halfHealth = maxHealth/2;
-        float quarterHealth = maxHealth/4;
+        int halfHealth = maxHealth/2;
+        int quarterHealth = maxHealth/4;
 
         if(healthValue > halfHealth)
         {
@@ -45,6 +55,7 @@ public class PlayerHealthManager : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     public void loseHealth(float damageValue)
     {
         currentHealth -= damageValue;
@@ -64,5 +75,19 @@ public class PlayerHealthManager : MonoBehaviour
         }
 
         setHealthBar();
+=======
+    public void newSceneHealth(int newMaxHealth, int newCurrentHealth)
+    {
+        maxHealth = newMaxHealth;
+        currentHealth = newCurrentHealth;
+        setHealthBar(currentHealth);
+    }
+
+    public void levelUpHealth(int newMaxHealth)
+    {
+        maxHealth = newMaxHealth;
+        currentHealth = maxHealth;
+        setHealthBar(currentHealth);
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
     }
 }

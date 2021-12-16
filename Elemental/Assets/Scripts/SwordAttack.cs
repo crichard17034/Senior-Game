@@ -6,7 +6,13 @@ public class SwordAttack : MonoBehaviour
 {
     Animator anim;
     Collider swordHitbox;
+<<<<<<< HEAD
     public float damageValue;
+=======
+    private int damageValue;
+    private string currentElement;
+    bool attacking;
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 
     private void Start()
     {
@@ -39,8 +45,20 @@ public class SwordAttack : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
+<<<<<<< HEAD
+=======
+        if(other.tag == "Enemy" && attacking == true)
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
         {
             other.gameObject.GetComponent<EnemyController>().loseHealth(damageValue);
         }
     }
+<<<<<<< HEAD
+=======
+
+    public void updateAttackStr(int newAtkStr)
+    {
+        damageValue = newAtkStr;
+    }
+>>>>>>> 8b87322bcee5dc43911e67a66210a7f7f7a3052c
 }
