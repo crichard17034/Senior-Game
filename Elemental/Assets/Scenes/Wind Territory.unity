@@ -326,17 +326,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 211242915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03bf22bc7e87ab64e9bdd77b19cdcfe9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5531e3214bb85044f82cc6c0e4083895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTimer: 0
   currentHealth: 0
-  maxHealth: 75
+  maxHealth: 0
+  groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  lookRadius: 30
-  attackRange: 5
+    m_Bits: 0
+  lookRadius: 10
+  attackRange: 22
 --- !u!95 &211242918
 Animator:
   serializedVersion: 3
@@ -365,11 +365,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 211242915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98ab8a07dc155014da7e1a840b9c02ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 134ef2b1103aed64ea803d98b62f34e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 15
-  player: {fileID: 1729679765}
+  damageValue: 0
+  player: {fileID: 0}
 --- !u!195 &211242921
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -773,10 +773,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 798686903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8302b29374b9e714db3c15530ec36fcc, type: 3}
+  m_Script: {fileID: 11500000, guid: a6106e4a77e81d7478b6679390530bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1729679762}
   damageValue: 0
 --- !u!1 &888329156
 GameObject:
@@ -991,13 +990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1072da2f4477549aa6c0fb765d8ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 100
-  healthText: {fileID: 1866051707}
-  healthImage: {fileID: 719369903}
-  fullHealthIMG: {fileID: 2800000, guid: aca9ddb5e16159444a9a6f7d84cf7e9a, type: 3}
-  halfHealthIMG: {fileID: 2800000, guid: 9364cf26c2645bb4d942597058f63030, type: 3}
-  quarterHealthIMG: {fileID: 2800000, guid: 991c9726eafc27846bd7590a8159c4dc, type: 3}
 --- !u!1 &1013634236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1322,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1244742447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b94d5e366dd24c94386f366fddbfe244, type: 3}
+  m_Script: {fileID: 11500000, guid: 60d64390c8418464cbc6058468d13a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 550
@@ -1497,11 +1489,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471381865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98ab8a07dc155014da7e1a840b9c02ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 5531e3214bb85044f82cc6c0e4083895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 15
-  player: {fileID: 1729679765}
+  currentHealth: 0
+  maxHealth: 0
+  groundCheck: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  lookRadius: 10
+  attackRange: 22
 --- !u!114 &1471381868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,17 +1509,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471381865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03bf22bc7e87ab64e9bdd77b19cdcfe9, type: 3}
+  m_Script: {fileID: 11500000, guid: 134ef2b1103aed64ea803d98b62f34e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTimer: 0
-  currentHealth: 0
-  maxHealth: 75
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  lookRadius: 30
-  attackRange: 5
+  damageValue: 0
+  player: {fileID: 0}
 --- !u!95 &1471381869
 Animator:
   serializedVersion: 3
@@ -1796,11 +1788,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1536954255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98ab8a07dc155014da7e1a840b9c02ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 5531e3214bb85044f82cc6c0e4083895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 15
-  player: {fileID: 1729679765}
+  currentHealth: 0
+  maxHealth: 0
+  groundCheck: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  lookRadius: 10
+  attackRange: 22
 --- !u!114 &1536954258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1810,17 +1808,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1536954255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03bf22bc7e87ab64e9bdd77b19cdcfe9, type: 3}
+  m_Script: {fileID: 11500000, guid: 134ef2b1103aed64ea803d98b62f34e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTimer: 0
-  currentHealth: 0
-  maxHealth: 75
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  lookRadius: 30
-  attackRange: 5
+  damageValue: 0
+  player: {fileID: 0}
 --- !u!95 &1536954259
 Animator:
   serializedVersion: 3
@@ -1928,10 +1920,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1640409929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef397baa2fb6eec47ba9cdd545ff7c8a, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b80ae5f27c09c458e6f228368616fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpLocation: Vale(HUB)
+  warpLocation: 
 --- !u!65 &1640409931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2095,6 +2087,7 @@ GameObject:
   - component: {fileID: 1729679764}
   - component: {fileID: 1729679767}
   - component: {fileID: 1729679768}
+  - component: {fileID: 1729679763}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Player
@@ -2102,6 +2095,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1729679763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729679762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd95b18c731c5c644a05a4ac02b2ae53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1729679768}
+  footStepSounds:
+  - {fileID: 8300000, guid: 27837f4db67a5b94197d40ae4bf67716, type: 3}
+  - {fileID: 8300000, guid: 4fac36b034e69e04fa4dfc57d5a9f8cd, type: 3}
+  - {fileID: 8300000, guid: 996d31e3dbcb4bc48bb196913d27dbe2, type: 3}
+  - {fileID: 8300000, guid: ced0bdd844609814da07e7cf980b4b3f, type: 3}
 --- !u!114 &1729679764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,29 +2122,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1729679762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4574427a4b4991b4b8a6c1375ed20e47, type: 3}
+  m_Script: {fileID: 11500000, guid: 109bc387721543448b9581e926ff2a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1729679765}
-  speed: 17
-  sprintSpeed: 27
+  speed: 12
+  sprintSpeed: 20
   gravity: -29.43
   jumpHeight: 4
-  currentHealth: 0
-  maxHealth: 100
-  attackStr: 25
   groundCheck: {fileID: 1628605258}
   headCheck: {fileID: 2013058144}
   groundDistance: 5
   groundMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   isWalking: 0
   isSprinting: 0
   staminaBar: {fileID: 966608337}
-  healthBar: {fileID: 982436779}
   sprintCooldown: 0
-  soundGenerator: {fileID: 1729679767}
+  soundGenerator: {fileID: 1729679763}
   footStepTimer: 0
 --- !u!143 &1729679765
 CharacterController:
@@ -2180,15 +2187,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1729679762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 704c64f4261ecec42a182142a035ba87, type: 3}
+  m_Script: {fileID: 11500000, guid: 53801c563fb073e4784f737a308952fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1729679768}
-  footStepSounds:
-  - {fileID: 8300000, guid: 27837f4db67a5b94197d40ae4bf67716, type: 3}
-  - {fileID: 8300000, guid: 4fac36b034e69e04fa4dfc57d5a9f8cd, type: 3}
-  - {fileID: 8300000, guid: 996d31e3dbcb4bc48bb196913d27dbe2, type: 3}
-  - {fileID: 8300000, guid: ced0bdd844609814da07e7cf980b4b3f, type: 3}
+  currentHealth: 120
+  maxHealth: 100
+  healthText: {fileID: 1866051707}
+  healthImage: {fileID: 719369903}
+  fullHealthIMG: {fileID: 2800000, guid: aca9ddb5e16159444a9a6f7d84cf7e9a, type: 3}
+  halfHealthIMG: {fileID: 2800000, guid: 9364cf26c2645bb4d942597058f63030, type: 3}
+  quarterHealthIMG: {fileID: 2800000, guid: 991c9726eafc27846bd7590a8159c4dc, type: 3}
 --- !u!82 &1729679768
 AudioSource:
   m_ObjectHideFlags: 0

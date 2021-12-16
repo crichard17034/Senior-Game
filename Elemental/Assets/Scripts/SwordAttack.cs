@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
-    public GameObject player;
     Animator anim;
     Collider swordHitbox;
     public float damageValue;
-    bool attacking;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         swordHitbox = GetComponent<Collider>();
         swordHitbox.isTrigger = false;
-        updateAttackStr();
     }
 
     private void Update()
@@ -25,32 +22,25 @@ public class SwordAttack : MonoBehaviour
 
     public void checkForAttack()
     {
-        if(Input.GetButtonDown("Attack"))
+        if (Input.GetButtonDown("Attack"))
         {
             anim.SetBool("attacking", true);
             swordHitbox.isTrigger = true;
-            attacking = true;
 
         }
-        else if(Input.GetButtonUp("Attack"))
+        else if (Input.GetButtonUp("Attack"))
         {
             anim.SetBool("attacking", false);
             swordHitbox.isTrigger = false;
-            attacking = false;
         }
     }
 
     //checks if the game object that collided with the sword is an enemy
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Enemy" && attacking == true)
+        if (other.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyController>().loseHealth(damageValue);
         }
-    }
-
-    public void updateAttackStr()
-    {
-        damageValue = player.GetComponent<PlayerController>().attackStr;
     }
 }

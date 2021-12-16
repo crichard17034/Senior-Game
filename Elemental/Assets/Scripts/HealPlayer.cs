@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class HealPlayer : MonoBehaviour
 {
     public float healValue;
+    public CharacterController player;
 
     void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<PlayerController>().gainHealth(healValue);
+        other.gameObject.GetComponent<PlayerHealthManager>().gainHealth(healValue);
     }
 }
