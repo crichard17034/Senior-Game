@@ -799,7 +799,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healValue: 7
-  player: {fileID: 0}
 --- !u!65 &366518349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1167,7 +1166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageValue: 25
-  player: {fileID: 0}
 --- !u!65 &481272525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1297,12 +1295,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 100
+  xp: 0
   groundCheck: {fileID: 650577168}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
   lookRadius: 10
   attackRange: 22
+  attackTimer: 120
 --- !u!95 &487044339
 Animator:
   serializedVersion: 3
@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8302b29374b9e714db3c15530ec36fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 25
+  player: {fileID: 0}
 --- !u!95 &774927254
 Animator:
   serializedVersion: 3
@@ -3382,12 +3382,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 75
+  xp: 0
   groundCheck: {fileID: 1795413194}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
   lookRadius: 30
   attackRange: 3
+  attackTimer: 120
 --- !u!95 &1420203413
 Animator:
   serializedVersion: 3
@@ -4960,8 +4962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1072da2f4477549aa6c0fb765d8ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 120
-  maxHealth: 100
   healthText: {fileID: 1462300853}
   healthImage: {fileID: 661811614}
   fullHealthIMG: {fileID: 2800000, guid: aca9ddb5e16159444a9a6f7d84cf7e9a, type: 3}
@@ -4980,10 +4980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1925332915}
-  speed: 17
-  sprintSpeed: 27
-  gravity: -29.43
-  jumpHeight: 4
+  xp: 0
   groundCheck: {fileID: 291390776}
   headCheck: {fileID: 1631495105}
   groundDistance: 5
@@ -4993,6 +4990,8 @@ MonoBehaviour:
   isWalking: 0
   isSprinting: 0
   staminaBar: {fileID: 2033542247}
+  healthBar: {fileID: 496053229}
+  sword: {fileID: 0}
   sprintCooldown: 0
   soundGenerator: {fileID: 1925332912}
   footStepTimer: 0
