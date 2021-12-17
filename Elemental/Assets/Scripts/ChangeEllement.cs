@@ -7,25 +7,18 @@ public class ChangeEllement : MonoBehaviour
     //This File is connected to the Element Object within the First Person Controller
 
     //Tells the Player that they have the element
-    public bool hasFire = false;
-    public bool hasWater = false;
-    public bool hasWind = false;
+    bool hasFire = false;
+    bool hasWater = false;
+    bool hasWind = false;
 
     //Lets the program know which element is active or not.
-    public bool FireActive = false;
-    public bool WaterActive = false;
-    public bool WindActive = false;
+    bool FireActive = false;
+    bool WaterActive = false;
+    bool WindActive = false;
 
 
-    //lets the game know how manuy 
-    public int totalGems = 0;
-
-    
-
-
-
-    //A Variable that is accessed by the addEllement script.
-    public static string setElem = "No Element";
+    //lets the game know how many gems that the player collected 
+    int totalGems = 0;
 
     void Start()
     {
