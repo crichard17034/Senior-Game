@@ -16,9 +16,15 @@ public class PlayerController : MonoBehaviour
     private int maxHealth;
     private int attackStrength;
     private int level;
-    public int xp;
+    private int xp;
     private int xpGoal;
-    private string currentElement;
+    public string currentElement;
+    private string elementWeakness;
+    private int fireStone;
+    private int waterStone;
+    private int windStone;
+    private int lightStone;
+    private int darkStone;
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -39,6 +45,7 @@ public class PlayerController : MonoBehaviour
         checkForGround();
         checkForCeiling();
         checkForJump();
+        checkForSwap();
     }
 
     public void checkForMovement()
@@ -121,6 +128,37 @@ public class PlayerController : MonoBehaviour
         if ((controller.collisionFlags & CollisionFlags.Above) != 0)
         {
             velocity.y = 0f;
+        }
+    }
+
+    public void checkForSwap()
+    {
+        if (Input.GetButtonDown("FireSwitch") && staminaBar.GetComponent<Slider>().value > 0f && fireStone == 1)
+        {
+            if(currentElement != "Fire")
+            {
+                currentElement = "Fire";
+                elementWeakness = "Water";
+            }
+            else
+            {
+                currentElement = "None";
+                elementWeakness = "None";
+            }
+        }
+        
+        if (Input.GetButtonDown("WaterSwitch") && staminaBar.GetComponent<Slider>().value > 0f && waterStone == 1)
+        {
+            if(currentElement != "Water")
+            {
+                currentElement = "Water";
+                elementWeakness = "Wind";
+            }
+            else
+            {
+                currentElement = "None";
+                elementWeakness = "None";
+            }
         }
     }
 
