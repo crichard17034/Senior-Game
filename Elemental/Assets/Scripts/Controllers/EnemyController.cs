@@ -12,8 +12,10 @@ public class EnemyController : MonoBehaviour
     public string element;
     NavMeshAgent agent;
     Transform target;
+    public Transform groundCheck;
+    public LayerMask groundMask;
     Vector3 velocity;
-    public float lookRadius = 40f;
+    public float lookRadius = 10f;
     public float attackRange = 22f;
     public float attackTimer = 120f;
     Collider slimeHitbox;
@@ -44,7 +46,7 @@ public class EnemyController : MonoBehaviour
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             faceTarget();
 
-            if (agent.remainingDistance > 22f && attackTimer > 0f)
+            if (agent.remainingDistance > 7f && attackTimer > 0f)
             {
                 anim.SetBool("Chasing", true);
             }
@@ -70,7 +72,6 @@ public class EnemyController : MonoBehaviour
             {
                 anim.SetBool("Attacking", true);
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-                attackTimer = 120f;
             }
         }
         else
@@ -84,7 +85,7 @@ public class EnemyController : MonoBehaviour
     public void faceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
