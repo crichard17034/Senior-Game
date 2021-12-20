@@ -19,11 +19,7 @@ public class PlayerController : MonoBehaviour
     private int xpGoal;
     public string currentElement;
     private string elementWeakness;
-    private int fireStone;
-    private int waterStone;
-    private int windStone;
-    private int lightStone;
-    private int darkStone;
+    private List<string> elementList;
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -37,6 +33,11 @@ public class PlayerController : MonoBehaviour
     public float sprintCooldown; 
     [SerializeField] Footsteps soundGenerator;
     [SerializeField] float footStepTimer;
+
+    void Start()
+    {
+        List<string> elementList = new List<string>();
+    }
 
     void Update()
     {
@@ -132,33 +133,7 @@ public class PlayerController : MonoBehaviour
 
     public void checkForSwap()
     {
-        if (Input.GetButtonDown("FireSwitch") && staminaBar.GetComponent<Slider>().value > 0f && fireStone == 1)
-        {
-            if(currentElement != "Fire")
-            {
-                currentElement = "Fire";
-                elementWeakness = "Water";
-            }
-            else
-            {
-                currentElement = "None";
-                elementWeakness = "None";
-            }
-        }
-        
-        if (Input.GetButtonDown("WaterSwitch") && staminaBar.GetComponent<Slider>().value > 0f && waterStone == 1)
-        {
-            if(currentElement != "Water")
-            {
-                currentElement = "Water";
-                elementWeakness = "Wind";
-            }
-            else
-            {
-                currentElement = "None";
-                elementWeakness = "None";
-            }
-        }
+
     }
 
     public void loseHealth(int damageValue)
@@ -227,6 +202,14 @@ public class PlayerController : MonoBehaviour
     public void sendStats()
     {
         FindObjectOfType<GameManager>().updateDatabase(maxHealth, currentHealth, attackStrength, level, xp, xpGoal);
+    }
+
+    public void collectGem(string gemName)
+    {
+        if(elementList.Contains(gemName))
+        {
+            elementList.Add(gemName);
+        }
     }
 
     public void PlayFootstep()
