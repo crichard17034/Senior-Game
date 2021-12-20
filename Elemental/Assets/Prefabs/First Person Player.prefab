@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2981149416920627847}
-  xp: 0
+  currentElement: None
   groundCheck: {fileID: 2981149417020645464}
   headCheck: {fileID: 2981149416637775730}
   groundDistance: 5

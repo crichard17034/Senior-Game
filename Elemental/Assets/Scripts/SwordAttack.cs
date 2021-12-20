@@ -54,4 +54,9 @@ public class SwordAttack : MonoBehaviour
     {
         damageValue = newAtkStr;
     }
+
+    public void changeElement(string newElement)
+    {
+        currentElement = newElement;
+    }
 }

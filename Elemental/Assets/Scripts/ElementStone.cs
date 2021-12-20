@@ -9,6 +9,5 @@ public class ElementStone : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         other.gameObject.GetComponent<PlayerController>().collectGem(gemName);
-        Destroy(gameObject);
     }
 }

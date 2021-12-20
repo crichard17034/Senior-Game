@@ -339,7 +339,7 @@ MonoBehaviour:
   currentHealth: 75
   maxHealth: 75
   xp: 20
-  element: 
+  element: None
   lookRadius: 22
   attackRange: 10
   attackTimer: 120

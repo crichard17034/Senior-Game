@@ -25,6 +25,7 @@ public class EnemyController : MonoBehaviour
         currentHealth = maxHealth;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        setElement();
     }
 
     void Update()
@@ -88,7 +89,7 @@ public class EnemyController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-
+    //When moving, the object's root position is set to move with the animation, preventing the enemy from getting soft locked in place.
     public void OnAnimatorMove()
     {
         Vector3 position = anim.rootPosition;
@@ -100,6 +101,11 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    public void setElement()
+    {
+        gameObject.GetComponent<DamagePlayer>().setElementDamage(element);
     }
 
     public void loseHealth(int damageValue)

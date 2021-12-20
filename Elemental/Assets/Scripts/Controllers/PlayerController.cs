@@ -19,7 +19,12 @@ public class PlayerController : MonoBehaviour
     private int xpGoal;
     public string currentElement;
     private string elementWeakness;
-    private List<string> elementList;
+    private string elementResistence;
+    private bool fireStone;
+    private bool waterStone;
+    private bool windStone;
+    private bool darkStone;
+    private bool lightStone;
     public Transform groundCheck; 
     public Transform headCheck; 
     public float groundDistance = 5f; 
@@ -34,11 +39,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Footsteps soundGenerator;
     [SerializeField] float footStepTimer;
 
-    void Start()
-    {
-        List<string> elementList = new List<string>();
-    }
 
+    void Awake()
+    {
+        currentElement = "None";
+        elementWeakness = "None";
+        elementResistence = "None";
+
+    }
     void Update()
     {
         checkForMovement();
@@ -46,6 +54,7 @@ public class PlayerController : MonoBehaviour
         checkForCeiling();
         checkForJump();
         checkForSwap();
+        checkForStaminaDrain();
     }
 
     public void checkForMovement()
@@ -131,14 +140,122 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    //Checks if the player is holding down a button and if the element has been unlocked. If true, it will adjust the element weaknesses.
+    //NOTE: THIS SECTION IS TO BE REDONE AS A DICTIONARY TO REDUCE CODE REUSAGE
     public void checkForSwap()
     {
-
+        if(Input.GetButtonDown("FireSwitch") && fireStone == true)
+        {
+            if(currentElement != "Fire" && staminaBar.GetComponent<Slider>().value > 0)
+            {
+                currentElement = "Fire";
+                elementWeakness = "Water";
+                elementResistence = "Wind";
+            }
+            else
+            {
+                currentElement = "None";
+                elementWeakness = "None";
+                elementResistence = "None";
+            }
+        }
+        else if(Input.GetButtonDown("WaterSwitch") && waterStone == true)
+        {
+            if(currentElement != "Water" && staminaBar.GetComponent<Slider>().value > 0)
+            {
+                currentElement = "Water";
+                elementWeakness = "Wind";
+                elementResistence = "Fire";
+            }
+            else
+            {
+                currentElement = "None";
+                elementWeakness = "None";
+                elementResistence = "None";
+            }
+        }
+        else if(Input.GetButtonDown("WindSwitch") && windStone == true)
+        {
+            if(currentElement != "Wind" && staminaBar.GetComponent<Slider>().value > 0)
+            {
+                currentElement = "Wind";
+                elementWeakness = "Fire";
+                elementResistence = "Water";
+            }
+            else
+            {
+                currentElement = "None";
+                elementWeakness = "None";
+                elementResistence = "None";
+            }
+        }
+        else if(Input.GetButtonDown("LightSwitch") && lightStone == true)
+        {
+            if(currentElement != "Light" && staminaBar.GetComponent<Slider>().value > 0)
+            {
+                currentElement = "Light";
+                elementWeakness = "Dark";
+                elementResistence = "Light";
+            }
+            else
+            {
+                currentElement = "None";
+                elementWeakness = "None";
+                elementResistence = "None";
+            }
+        }
+        else 
+        {
+            if(Input.GetButtonDown("DarkSwitch") && darkStone == true)
+            {
+                if(currentElement != "Dark" && staminaBar.GetComponent<Slider>().value > 0)
+                {
+                    currentElement = "Dark";
+                    elementWeakness = "Light";
+                    elementResistence = "Dark";
+                }
+                else
+                {
+                    currentElement = "None";
+                    elementWeakness = "None";
+                    elementResistence = "None";
+                }
+            }
+        }
+        sword.GetComponent<SwordAttack>().changeElement(currentElement);
     }
 
-    public void loseHealth(int damageValue)
+    private void checkForStaminaDrain()
     {
-        currentHealth -= damageValue;
+        if(currentElement != "None")
+        {
+            staminaBar.GetComponent<Slider>().value -= Time.deltaTime * 10;
+        }
+
+        if(staminaBar.GetComponent<Slider>().value == 0)
+        {
+            currentElement = "None";
+            elementWeakness = "None";
+            elementResistence = "None";
+        }
+    }
+
+    public void loseHealth(int damageValue, string element)
+    {
+        if(element == elementWeakness && currentElement != "None")
+        {
+            currentHealth -= (damageValue * 2);
+        }
+        else if(element == elementResistence && currentElement != "None")
+        {
+            currentHealth -= (damageValue /2);
+        }
+        else
+        {
+            currentHealth -= damageValue;
+        }
+        
         if(currentHealth < 0)
         {
             currentHealth = 0;
@@ -204,11 +321,59 @@ public class PlayerController : MonoBehaviour
         FindObjectOfType<GameManager>().updateDatabase(maxHealth, currentHealth, attackStrength, level, xp, xpGoal);
     }
 
+    //The name of the gem collected is passed into the collectGem function and either sets the corresponding element to true or grants 500 xp.
+    //NOTE: THIS SECTION IS TO BE REDONE AS A DICTIONARY TO REDUCE CODE REUSAGE
+
     public void collectGem(string gemName)
     {
-        if(elementList.Contains(gemName))
+        if(gemName  == "fire")
         {
-            elementList.Add(gemName);
+            if(fireStone == false)
+            {
+                fireStone = true;            
+                Debug.Log("The fire element has been added.");
+            }
+            else
+            {
+                gainXP(500);
+            }
+        }
+        else if(gemName == "water")
+        {
+            if(waterStone == false)
+            {
+                waterStone = true;            
+                Debug.Log("The water element has been added.");
+            }
+            else
+            {
+                gainXP(500);
+            }
+        }
+        else if(gemName == "wind")
+        {
+            if(windStone == false)
+            {
+                windStone = true;            
+                Debug.Log("The wind element has been added.");
+            }
+            else
+            {
+                gainXP(500);
+            }
+        }
+        else
+        {
+            if(lightStone == false && darkStone == false)
+            {
+                lightStone = true;
+                darkStone = true;            
+                Debug.Log("The light and dark elements have been added.");
+            }
+            else
+            {
+                gainXP(500);
+            }
         }
     }
 
