@@ -282,11 +282,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
   m_RootOrder: 9
+<<<<<<< HEAD
 =======
   m_RootOrder: 11
 >>>>>>> parent of 31164fe (worked on gems)
+=======
+>>>>>>> parent of 356bdba (Merge branch 'jsWork')
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &445042135
 GameObject:
@@ -1103,11 +1105,13 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 940c6180e213b7e4595c7d33ae5479eb,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
       value: 7
+<<<<<<< HEAD
 =======
       value: 10
 >>>>>>> parent of 31164fe (worked on gems)
+=======
+>>>>>>> parent of 356bdba (Merge branch 'jsWork')
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 940c6180e213b7e4595c7d33ae5479eb,
         type: 3}
@@ -2799,8 +2803,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
     - target: {fileID: 2981149416920627840, guid: ac374c1ef4bb5f14aa660246ab740e26,
+<<<<<<< HEAD
 =======
     - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
         type: 3}
@@ -2814,6 +2818,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73b9d0ac0893c3241a1308f16fdb35cc,
 >>>>>>> parent of 31164fe (worked on gems)
+=======
+>>>>>>> parent of 356bdba (Merge branch 'jsWork')
         type: 3}
       propertyPath: m_Name
       value: First Person Player
