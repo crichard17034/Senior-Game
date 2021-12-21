@@ -179,8 +179,8 @@ MonoBehaviour:
     y: 0
     width: 246
     height: 672
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -217,6 +217,7 @@ MonoBehaviour:
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 16
 >>>>>>> parent of 31164fe (worked on gems)
 =======
@@ -224,6 +225,9 @@ MonoBehaviour:
 =======
   controlID: 61
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+  controlID: 16
+>>>>>>> parent of 31164fe (worked on gems)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +310,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 135
+  controlID: 14
 --- !u!114 &9
 >>>>>>> jsWork
 MonoBehaviour:
@@ -383,7 +387,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 60
+  controlID: 15
 --- !u!114 &11
 >>>>>>> jsWork
 MonoBehaviour:
@@ -422,6 +426,7 @@ MonoBehaviour:
     width: 276
     height: 947
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
@@ -433,6 +438,10 @@ MonoBehaviour:
 =======
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> parent of 31164fe (worked on gems)
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -580,6 +589,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -600,11 +610,19 @@ MonoBehaviour:
   - Assets/Materials/Materials/Gem Material
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+    - Assets/Models
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Models
+>>>>>>> parent of 31164fe (worked on gems)
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jeitniear\Senior-Game\Elemental
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c4450000
     m_LastClickedID: 17860
@@ -612,10 +630,13 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 31164fe (worked on gems)
     scrollPos: {x: 0, y: 26}
     m_SelectedIDs: 94370000
     m_LastClickedID: 14228
     m_ExpandedIDs: 0000000082370000843700008637000088370000
+<<<<<<< HEAD
 >>>>>>> parent of 31164fe (worked on gems)
 =======
 >>>>>>> parent of 356bdba (Merge branch 'jsWork')
@@ -626,6 +647,8 @@ MonoBehaviour:
     m_ExpandedIDs: 0000000092390000943900009639000098390000a4390000b0390000e0390000
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+>>>>>>> parent of 31164fe (worked on gems)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -653,6 +676,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a2450000a4450000a6450000a8450000aa450000ac450000
 <<<<<<< HEAD
 =======
@@ -665,6 +689,9 @@ MonoBehaviour:
     m_ExpandedIDs: 0000000092390000943900009639000098390000
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+    m_ExpandedIDs: 0000000082370000843700008637000088370000
+>>>>>>> parent of 31164fe (worked on gems)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -709,10 +736,14 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 0}
 =======
       m_ClientGUIView: {fileID: 3}
 >>>>>>> jsWork
+=======
+      m_ClientGUIView: {fileID: 0}
+>>>>>>> parent of 31164fe (worked on gems)
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -940,6 +971,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 105.567795, y: -74.03085, z: 692.1892}
     speed: 2
     m_Value: {x: 105.567795, y: -74.03085, z: 692.1892}
@@ -956,6 +988,11 @@ MonoBehaviour:
     m_Value: {x: 11.989854, y: 5.0357704, z: 0.78898156}
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+    m_Target: {x: 17.091618, y: -89.91315, z: 128.41792}
+    speed: 2
+    m_Value: {x: 17.091618, y: -89.91315, z: 128.41792}
+>>>>>>> parent of 31164fe (worked on gems)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1001,6 +1038,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.29519823, y: 0.2639909, z: -0.08523665, w: -0.9142772}
     speed: 2
     m_Value: {x: -0.29519823, y: 0.2639909, z: -0.08523665, w: -0.91427714}
@@ -1011,11 +1049,15 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
     m_Target: {x: -0.39435235, y: 0.3556846, z: -0.1689585, w: -0.83035356}
+=======
+    m_Target: {x: -0.29084274, y: -0.08795384, z: 0.026862301, w: -0.95235413}
+>>>>>>> parent of 31164fe (worked on gems)
     speed: 2
-    m_Value: {x: -0.395331, y: 0.35666442, z: -0.17008005, w: -0.8292024}
+    m_Value: {x: -0.29130754, y: -0.069366515, z: 0.02118585, w: -0.953876}
   m_Size:
-    m_Target: 1.734554
+    m_Target: 97.75514
     speed: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Value: 97.75514
 >>>>>>> parent of 31164fe (worked on gems)
@@ -1025,6 +1067,9 @@ MonoBehaviour:
     m_Value: 1.4345541
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+    m_Value: 97.75514
+>>>>>>> parent of 31164fe (worked on gems)
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1157,9 +1202,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b2beffff
-      m_LastClickedID: -16718
-      m_ExpandedIDs: b4c9ffff4cdeffffeee9ffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 22f6ffff3a35000032360000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1183,6 +1228,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 567c1b2ecaccdb74294446c87e70166c
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 31164fe (worked on gems)
 =======
@@ -1266,3 +1312,5 @@ MonoBehaviour:
     height: 353
   m_ViewDataDictionary: {fileID: 0}
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+>>>>>>> parent of 31164fe (worked on gems)
