@@ -16,16 +16,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 8
     y: 51
-<<<<<<< HEAD
     width: 1873
-=======
-    width: 1904
->>>>>>> ccwork
     height: 981
   m_ShowMode: 4
   m_Title: 
 <<<<<<< HEAD
   m_RootView: {fileID: 6}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_MinSize: {x: 875, y: 542}
@@ -34,6 +31,8 @@ MonoBehaviour:
 >>>>>>> jsWork
 =======
 =======
+>>>>>>> parent of 6446f6e (c)
+=======
   m_RootView: {fileID: 7}
 <<<<<<< HEAD
 >>>>>>> crWork
@@ -41,10 +40,13 @@ MonoBehaviour:
 =======
   m_MinSize: {x: 875, y: 542}
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
   m_MinSize: {x: 875, y: 300}
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -55,7 +57,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-<<<<<<< HEAD
   m_EditorHideFlags: 1
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -101,19 +102,16 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-=======
->>>>>>> ccwork
   m_EditorHideFlags: 1
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 3}
+  - {fileID: 10}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
     y: 0
     width: 1873
     height: 931
@@ -140,6 +138,7 @@ MonoBehaviour:
   controlID: 201
 --- !u!114 &4
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
     y: 30
     width: 1904
@@ -151,6 +150,8 @@ MonoBehaviour:
 >>>>>>> parent of a1b1be3 (minor changes)
 --- !u!114 &3
 >>>>>>> ccwork
+=======
+>>>>>>> parent of 6446f6e (c)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,9 +172,12 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1367
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 6446f6e (c)
     x: 1468
 >>>>>>> parent of a1b1be3 (minor changes)
     y: 0
@@ -186,11 +190,6 @@ MonoBehaviour:
     x: 1536
     y: 0
     width: 337
-=======
-    x: 1518
-    y: 0
-    width: 386
->>>>>>> ccwork
     height: 931
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -235,13 +234,8 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
-<<<<<<< HEAD
     width: 363
     height: 561
-=======
-    width: 376
-    height: 557
->>>>>>> ccwork
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -281,7 +275,6 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     y: 561
@@ -363,26 +356,17 @@ MonoBehaviour:
     y: 586
     width: 1536
     height: 345
-=======
-    y: 557
-    width: 1518
-    height: 374
->>>>>>> ccwork
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 14}
 >>>>>>> crWork
   m_Panes:
   - {fileID: 14}
-  - {fileID: 18}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
-<<<<<<< HEAD
 --- !u!114 &7
 >>>>>>> crWork
-=======
---- !u!114 &6
->>>>>>> ccwork
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,6 +393,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1920
     height: 997
 <<<<<<< HEAD
@@ -427,6 +412,11 @@ MonoBehaviour:
   m_MinSize: {x: 875, y: 300}
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+    width: 1873
+    height: 981
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> parent of 6446f6e (c)
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -445,11 +435,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 1873
-=======
-    width: 1904
->>>>>>> ccwork
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -499,11 +485,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 961
-<<<<<<< HEAD
     width: 1873
-=======
-    width: 1904
->>>>>>> ccwork
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -549,9 +531,12 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1367
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 6446f6e (c)
     width: 1468
 >>>>>>> parent of a1b1be3 (minor changes)
     height: 947
@@ -583,6 +568,7 @@ MonoBehaviour:
 >>>>>>> crWork
 --- !u!114 &11
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
     width: 1518
     height: 931
@@ -593,6 +579,8 @@ MonoBehaviour:
 --- !u!114 &10
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -612,7 +600,6 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 0
     y: 0
-<<<<<<< HEAD
 <<<<<<< HEAD
     width: 1468
     height: 561
@@ -677,6 +664,7 @@ MonoBehaviour:
 >>>>>>> crWork
 --- !u!114 &12
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
     width: 1518
     height: 557
@@ -687,6 +675,8 @@ MonoBehaviour:
 --- !u!114 &11
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -718,9 +708,12 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 403
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 6446f6e (c)
     x: 363
 >>>>>>> parent of a1b1be3 (minor changes)
     y: 0
@@ -754,6 +747,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &13
+<<<<<<< HEAD
 =======
     x: 376
     y: 0
@@ -780,6 +774,8 @@ MonoBehaviour:
 >>>>>>> jsWork
 =======
 >>>>>>> ccwork
+=======
+>>>>>>> parent of 6446f6e (c)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -788,24 +784,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
+    m_Text: Animator
+    m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 384
-    y: 81
-    width: 1140
-    height: 536
+    x: 251
+    y: 73
+    width: 1322
+    height: 575
   m_ViewDataDictionary: {fileID: 0}
-<<<<<<< HEAD
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 499746342921929423, guid: a7944514b8763354d9f69f3cb60bdc57, type: 2}
@@ -863,6 +858,7 @@ MonoBehaviour:
     m_SelectedLayerIndex: 0
 --- !u!114 &14
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
   m_ShowContextualTools: 0
   m_WindowGUID: b8f0e4e4b5c0d7b4c9e847f89d61636c
@@ -1012,6 +1008,8 @@ MonoBehaviour:
 --- !u!114 &14
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1032,7 +1030,6 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
 <<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
@@ -1055,6 +1052,7 @@ MonoBehaviour:
     width: 1535
     height: 324
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
     x: 8
     y: 638
@@ -1062,6 +1060,8 @@ MonoBehaviour:
     height: 353
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1079,12 +1079,16 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 6446f6e (c)
     - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Scripts
+<<<<<<< HEAD
 =======
 >>>>>>> parent of a1b1be3 (minor changes)
     - Assets/Scenes
@@ -1125,12 +1129,13 @@ MonoBehaviour:
 =======
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\crichard\repos\Senior-Game\Elemental
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
@@ -1180,6 +1185,7 @@ MonoBehaviour:
     m_LastClickedID: 13962
     m_ExpandedIDs: 000000006a3600006c3600006e3600008a36000000ca9a3b
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
     scrollPos: {x: 0, y: 67}
     m_SelectedIDs: d6360000
@@ -1187,6 +1193,8 @@ MonoBehaviour:
     m_ExpandedIDs: 00000000a0360000a2360000a4360000a6360000a8360000aa360000ac360000ae360000b036000000ca9a3b
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1202,7 +1210,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1214,6 +1222,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1237,6 +1246,8 @@ MonoBehaviour:
 >>>>>>> parent of 31164fe (worked on gems)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 6446f6e (c)
     m_ExpandedIDs: 00000000e6420000e8420000ea420000ec420000ee420000f0420000
 =======
     m_ExpandedIDs: 000000002a3600002c3600002e360000
@@ -1244,10 +1255,13 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 000000006a3600006c3600006e360000
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
     m_ExpandedIDs: 00000000a0360000a2360000a4360000a6360000a8360000aa360000ac360000ae360000b0360000
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1283,14 +1297,9 @@ MonoBehaviour:
 =======
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-<<<<<<< HEAD
 >>>>>>> crWork
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
-=======
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000a236000000000000e2390000
->>>>>>> ccwork
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1310,6 +1319,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 0}
 =======
       m_ClientGUIView: {fileID: 3}
@@ -1321,6 +1331,8 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 0}
 >>>>>>> parent of 31164fe (worked on gems)
 =======
+=======
+>>>>>>> parent of 6446f6e (c)
       m_ClientGUIView: {fileID: 0}
 =======
       m_ClientGUIView: {fileID: 4}
@@ -1328,10 +1340,13 @@ MonoBehaviour:
 =======
       m_ClientGUIView: {fileID: 6}
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
       m_ClientGUIView: {fileID: 5}
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1343,9 +1358,9 @@ MonoBehaviour:
     m_GridSize: 64
 <<<<<<< HEAD
   m_SkipHiddenPackages: 0
-<<<<<<< HEAD
   m_DirectoriesAreaWidth: 207
 --- !u!114 &13
+<<<<<<< HEAD
 =======
   m_DirectoriesAreaWidth: 115
 <<<<<<< HEAD
@@ -1359,6 +1374,8 @@ MonoBehaviour:
 --- !u!114 &15
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1380,7 +1397,6 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
-<<<<<<< HEAD
     x: 1468
     y: 73
     width: 451
@@ -1391,12 +1407,6 @@ MonoBehaviour:
     width: 336
     height: 910
 >>>>>>> crWork
-=======
-    x: 1526
-    y: 81
-    width: 385
-    height: 910
->>>>>>> ccwork
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -1410,11 +1420,7 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
-<<<<<<< HEAD
 --- !u!114 &14
-=======
---- !u!114 &16
->>>>>>> ccwork
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1437,9 +1443,12 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
     x: 0
     y: 73
     width: 362
@@ -1450,17 +1459,10 @@ MonoBehaviour:
     width: 245
     height: 565
 >>>>>>> crWork
-=======
-    x: 8
-    y: 81
-    width: 375
-    height: 536
->>>>>>> ccwork
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: d4730000
@@ -1476,11 +1478,6 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 2efaffff90faffff
 >>>>>>> crWork
-=======
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 72f7ffff
->>>>>>> ccwork
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1503,6 +1500,7 @@ MonoBehaviour:
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_WindowGUID: 7797859eb76b20d42b7cfe4653cb1b37
 =======
@@ -1581,6 +1579,8 @@ MonoBehaviour:
 --- !u!114 &16
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 6446f6e (c)
   m_WindowGUID: 4c969a2b90040154d917609493e03593
 --- !u!114 &15
 >>>>>>> parent of a1b1be3 (minor changes)
@@ -1817,10 +1817,6 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 --- !u!114 &16
-=======
-  m_WindowGUID: 4c632741333c6c4408a2831593005d1c
---- !u!114 &17
->>>>>>> ccwork
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1843,12 +1839,15 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 507
     y: 94
     width: 1532
     height: 790
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 6446f6e (c)
     x: 363
     y: 73
     width: 1103
@@ -1859,6 +1858,7 @@ MonoBehaviour:
     width: 1293
     height: 565
 >>>>>>> crWork
+<<<<<<< HEAD
 =======
     x: 384
     y: 81
@@ -1866,6 +1866,8 @@ MonoBehaviour:
     height: 536
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1876,14 +1878,10 @@ MonoBehaviour:
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_TargetSize: {x: 1103, y: 519}
 =======
   m_TargetSize: {x: 1293, y: 544}
 >>>>>>> crWork
-=======
-  m_TargetSize: {x: 1140, y: 515}
->>>>>>> ccwork
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1899,7 +1897,6 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
-<<<<<<< HEAD
     m_HBaseRangeMin: -551.5
     m_HBaseRangeMax: 551.5
     m_VBaseRangeMin: -259.5
@@ -1910,12 +1907,6 @@ MonoBehaviour:
     m_VBaseRangeMin: -272
     m_VBaseRangeMax: 272
 >>>>>>> crWork
-=======
-    m_HBaseRangeMin: -570
-    m_HBaseRangeMax: 570
-    m_VBaseRangeMin: -268
-    m_VBaseRangeMax: 268
->>>>>>> ccwork
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1932,7 +1923,6 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-<<<<<<< HEAD
       y: 21
 <<<<<<< HEAD
       width: 1103
@@ -1945,20 +1935,12 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 646.5, y: 272}
 >>>>>>> crWork
-=======
-      y: 0
-      width: 1140
-      height: 536
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 570, y: 268}
->>>>>>> ccwork
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
 <<<<<<< HEAD
       x: -551.5
       y: -259.5
@@ -1976,22 +1958,13 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1293, y: 565}
 >>>>>>> crWork
-=======
-      x: -570
-      y: -268
-      width: 1140
-      height: 536
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1140, y: 536}
->>>>>>> ccwork
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
-<<<<<<< HEAD
 --- !u!114 &17
+<<<<<<< HEAD
 =======
 --- !u!114 &18
 <<<<<<< HEAD
@@ -2097,6 +2070,8 @@ MonoBehaviour:
 =======
 >>>>>>> ccwork
 >>>>>>> parent of a1b1be3 (minor changes)
+=======
+>>>>>>> parent of 6446f6e (c)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2117,7 +2092,6 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
 <<<<<<< HEAD
     x: 0
     y: 634
@@ -2204,12 +2178,6 @@ MonoBehaviour:
     y: 0
     width: 320
     height: 550
-=======
-    x: 8
-    y: 638
-    width: 1517
-    height: 353
->>>>>>> ccwork
   m_ViewDataDictionary: {fileID: 0}
 >>>>>>> parent of 47781ae (-fix for merge conflict)
 =======

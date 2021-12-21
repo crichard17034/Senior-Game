@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 68fbe1209eb5a854cbc1ebb38f9ad33a
+=======
+<<<<<<<< HEAD:Elemental/Assets/Materials/Slime Textures/WaterSlimeTextures.meta
+guid: 0a458cf43510cb94c9a633576c8ac455
+========
+<<<<<<< HEAD:Elemental/Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor.meta
+guid: ddf355b9eb6a03a4dbd8990fd7311be1
+=======
+guid: 21ba3207ae5e49643995bbc60e82fc88
+>>>>>>> jsWork:Elemental/Assets/Materials/Import Settings (Materials).meta
+>>>>>>>> parent of 6446f6e (c):Elemental/Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor.meta
+>>>>>>> parent of 6446f6e (c)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
