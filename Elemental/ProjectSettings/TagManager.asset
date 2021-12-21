@@ -9,8 +9,14 @@ TagManager:
   - Enemy
   - Grass
   - PlayerWeapon
+<<<<<<< HEAD
   - Database
   - Game Manager
+=======
+  - FireGem
+  - WaterGem
+  - WindGem
+>>>>>>> jsWork
   layers:
   - Default
   - TransparentFX
