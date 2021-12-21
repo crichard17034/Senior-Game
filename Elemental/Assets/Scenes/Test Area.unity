@@ -3397,6 +3397,7 @@ PrefabInstance:
       propertyPath: m_Name
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: Blue Gem
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3404,6 +3405,9 @@ PrefabInstance:
 =======
       value: Water Gem
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+      value: Blue Gem
+>>>>>>> parent of 31164fe (worked on gems)
 =======
       value: Blue Gem
 >>>>>>> parent of 31164fe (worked on gems)
@@ -4980,6 +4984,7 @@ PrefabInstance:
       propertyPath: m_Name
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: Red Gem
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4987,6 +4992,9 @@ PrefabInstance:
 =======
       value: Fire Gem
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+      value: Red Gem
+>>>>>>> parent of 31164fe (worked on gems)
 =======
       value: Red Gem
 >>>>>>> parent of 31164fe (worked on gems)
@@ -6145,6 +6153,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 6.4
 =======
       value: 12.37
@@ -6155,6 +6164,9 @@ PrefabInstance:
 =======
       value: 3.24
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+      value: 12.37
+>>>>>>> parent of 31164fe (worked on gems)
 =======
       value: 12.37
 >>>>>>> parent of 31164fe (worked on gems)

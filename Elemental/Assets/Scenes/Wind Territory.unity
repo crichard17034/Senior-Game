@@ -283,6 +283,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 9
 <<<<<<< HEAD
 =======
@@ -295,6 +296,9 @@ Transform:
   m_RootOrder: 12
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+  m_RootOrder: 11
+>>>>>>> parent of 31164fe (worked on gems)
 =======
   m_RootOrder: 11
 >>>>>>> parent of 31164fe (worked on gems)
@@ -1118,6 +1122,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 7
 <<<<<<< HEAD
 =======
@@ -1130,6 +1135,9 @@ PrefabInstance:
       value: 11
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+      value: 10
+>>>>>>> parent of 31164fe (worked on gems)
 =======
       value: 10
 >>>>>>> parent of 31164fe (worked on gems)

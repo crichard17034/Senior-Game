@@ -218,6 +218,7 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 16
 >>>>>>> parent of 31164fe (worked on gems)
 =======
@@ -225,6 +226,9 @@ MonoBehaviour:
 =======
   controlID: 61
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+  controlID: 16
+>>>>>>> parent of 31164fe (worked on gems)
 =======
   controlID: 16
 >>>>>>> parent of 31164fe (worked on gems)
@@ -427,6 +431,7 @@ MonoBehaviour:
     height: 947
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
@@ -438,6 +443,10 @@ MonoBehaviour:
 =======
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> parent of 31164fe (worked on gems)
 =======
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -590,6 +599,7 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -617,11 +627,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Models
 >>>>>>> parent of 31164fe (worked on gems)
+=======
+    - Assets/Models
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Models
+>>>>>>> parent of 31164fe (worked on gems)
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jeitniear\Senior-Game\Elemental
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c4450000
@@ -632,10 +650,13 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
 >>>>>>> parent of 31164fe (worked on gems)
+=======
+>>>>>>> parent of 31164fe (worked on gems)
     scrollPos: {x: 0, y: 26}
     m_SelectedIDs: 94370000
     m_LastClickedID: 14228
     m_ExpandedIDs: 0000000082370000843700008637000088370000
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 31164fe (worked on gems)
 =======
@@ -647,6 +668,8 @@ MonoBehaviour:
     m_ExpandedIDs: 0000000092390000943900009639000098390000a4390000b0390000e0390000
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+>>>>>>> parent of 31164fe (worked on gems)
 =======
 >>>>>>> parent of 31164fe (worked on gems)
     m_RenameOverlay:
@@ -677,6 +700,7 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a2450000a4450000a6450000a8450000aa450000ac450000
 <<<<<<< HEAD
 =======
@@ -689,6 +713,9 @@ MonoBehaviour:
     m_ExpandedIDs: 0000000092390000943900009639000098390000
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+    m_ExpandedIDs: 0000000082370000843700008637000088370000
+>>>>>>> parent of 31164fe (worked on gems)
 =======
     m_ExpandedIDs: 0000000082370000843700008637000088370000
 >>>>>>> parent of 31164fe (worked on gems)
@@ -737,10 +764,14 @@ MonoBehaviour:
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 0}
 =======
       m_ClientGUIView: {fileID: 3}
 >>>>>>> jsWork
+=======
+      m_ClientGUIView: {fileID: 0}
+>>>>>>> parent of 31164fe (worked on gems)
 =======
       m_ClientGUIView: {fileID: 0}
 >>>>>>> parent of 31164fe (worked on gems)
@@ -972,6 +1003,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 105.567795, y: -74.03085, z: 692.1892}
     speed: 2
     m_Value: {x: 105.567795, y: -74.03085, z: 692.1892}
@@ -988,6 +1020,11 @@ MonoBehaviour:
     m_Value: {x: 11.989854, y: 5.0357704, z: 0.78898156}
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+    m_Target: {x: 17.091618, y: -89.91315, z: 128.41792}
+    speed: 2
+    m_Value: {x: 17.091618, y: -89.91315, z: 128.41792}
+>>>>>>> parent of 31164fe (worked on gems)
 =======
     m_Target: {x: 17.091618, y: -89.91315, z: 128.41792}
     speed: 2
@@ -1039,6 +1076,7 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.29519823, y: 0.2639909, z: -0.08523665, w: -0.9142772}
     speed: 2
     m_Value: {x: -0.29519823, y: 0.2639909, z: -0.08523665, w: -0.91427714}
@@ -1052,11 +1090,15 @@ MonoBehaviour:
 =======
     m_Target: {x: -0.29084274, y: -0.08795384, z: 0.026862301, w: -0.95235413}
 >>>>>>> parent of 31164fe (worked on gems)
+=======
+    m_Target: {x: -0.29084274, y: -0.08795384, z: 0.026862301, w: -0.95235413}
+>>>>>>> parent of 31164fe (worked on gems)
     speed: 2
     m_Value: {x: -0.29130754, y: -0.069366515, z: 0.02118585, w: -0.953876}
   m_Size:
     m_Target: 97.75514
     speed: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_Value: 97.75514
@@ -1067,6 +1109,9 @@ MonoBehaviour:
     m_Value: 1.4345541
 >>>>>>> jsWork
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+    m_Value: 97.75514
+>>>>>>> parent of 31164fe (worked on gems)
 =======
     m_Value: 97.75514
 >>>>>>> parent of 31164fe (worked on gems)
@@ -1230,6 +1275,7 @@ MonoBehaviour:
   m_WindowGUID: 567c1b2ecaccdb74294446c87e70166c
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 31164fe (worked on gems)
 =======
 >>>>>>> parent of 356bdba (Merge branch 'jsWork')
@@ -1312,5 +1358,7 @@ MonoBehaviour:
     height: 353
   m_ViewDataDictionary: {fileID: 0}
 >>>>>>> parent of 47781ae (-fix for merge conflict)
+=======
+>>>>>>> parent of 31164fe (worked on gems)
 =======
 >>>>>>> parent of 31164fe (worked on gems)
